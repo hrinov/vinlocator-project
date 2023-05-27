@@ -14,7 +14,16 @@ import { ReactComponent as ShieldTick } from '../../icons/shield-tick.svg';
 import { ReactComponent as Rectangle511 } from '../../icons/rectangle511.svg';
 import { ReactComponent as SearchFavorite } from '../../icons/search-favorite.svg';
 import { ReactComponent as First3dCar } from '../../images/first-3d-car.svg';
-import secondBlueLineralGr from '../../images/second-blue-lineral-gr.svg';
+import firstBlueLineralGr from '../../images/second-blue-lineral-gr.svg'
+const GradientBlock = styled.div`
+position: absolute;
+width: 1440px;
+left: 50vw;
+transform: translate(-50%, -160px);
+height: 866px;
+z-index: -10;
+background-image: url(${firstBlueLineralGr});
+`
 const MainWrapper = styled.section`
 margin: 0 auto;
 width: 1112px;
@@ -120,8 +129,9 @@ width: 694px;
 height: 480px;
 `
 const ThirdBlock = styled.div`
-box-sizing: border-box;
 position: relative;
+bottom: 0px;
+box-sizing: border-box;
 background-color: white;
 z-index: 10;
 margin: 0 auto;
@@ -132,7 +142,7 @@ align-items: center;
 justify-content: space-between;
 width: 1112px;
 height: 332px;
-border: 1px solid #000000;
+border: 1px solid rgba(0, 0, 0, 0.5);;
 box-shadow: 0px 30px 20px rgba(0, 0, 0, 0.04);
 border-radius: 30px;
 `
@@ -182,17 +192,12 @@ span{
 const FourthBlock = styled.div`
 box-sizing: border-box;
 width: 1440px;
-height: 890px;
+height: 790px;
 padding-left: 164px;
 display: flex;
 align-items: center;
 justify-content: space-between;
-background-image: url(${secondBlueLineralGr});
-transform: translateY(-157px)
 `
-
-
-
 const IconWrapper = styled.div`
 width: 24px;
 height: 24px`
@@ -294,6 +299,7 @@ const ServiceDescription = () => {
             </ThirdBlock>
 
             <FourthBlock>
+                <GradientBlock />
                 <InfoBlockWrapper>
                     <InfoBlockTitle>Specifications and equipment</InfoBlockTitle>
                     <InfoBlock>If you're unsure whether the car you're interested in has a sunroof or blind spot detection as standard features, conducting

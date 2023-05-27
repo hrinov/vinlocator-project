@@ -1,7 +1,9 @@
 import styled from "styled-components"
 import { ReactComponent as MagnifyingGlass } from '../../icons/magnifying-glass.svg';
-import { useState } from "react";
+import { useState, useEffect } from "react";
+import { useForm } from "react-hook-form";
 const MainWrapper = styled.section`
+position: relative;
 margin: 0 auto;
 height: 290px;
 width: 1280px;
@@ -11,6 +13,8 @@ align-items: center;
 justify-content: center;
 background: linear-gradient(234deg, #FFFFFF -15.85%, #3AD0E6 97.11%);
 border-radius: 6px;
+transform: translateY(152px);
+z-index: 10;
 `
 const SearchType = styled.div`
 width: 536px;
@@ -52,10 +56,10 @@ height: 60px;
 border-radius: 40px;
 padding-left:60px;
 padding-right: 140px;
-border: 1px solid #000000;
+border: 1px solid rgba(0, 0, 0, 0.5);
 box-shadow: 0px 0px 0px 6px rgba(0, 0, 0, 0.04), inset 0px 4px 4px rgba(0, 0, 0, 0.2);
 :focus{
-    outline: 2px solid #72ecff
+    outline: 4px solid #b3f5ff
 }
     ::placeholder{
     font-family: 'Roboto';
@@ -78,7 +82,7 @@ position: absolute;
 width: 124px;
 height: 44px;
 background-color: #3AD0E6;
-border: 1px solid #000000;
+border: 1px solid rgba(0, 0, 0, 0.5);
 font-weight: 700;
 font-size: 18px;
 border-radius: 40px;
@@ -96,6 +100,23 @@ text-align: center;
 `
 const SecondSearchBlock = () => {
     const [searchType, setSearchType] = useState('VIN');
+    const [validation, setValidation] = useState(false)
+    const {
+        register,
+        handleSubmit,
+        formState: { errors },
+        setValue,
+        watch,
+    } = useForm();
+    const userData = watch("userData") ? watch("userData") : "";
+    const onSubmit = (data) => {
+        console.log(searchType, data.userData)
+    };
+    useEffect(() => {
+        if (validation) {
+            setValidation(false)
+        }
+    }, [userData])
     return (
         <MainWrapper>
             <SearchType>
@@ -116,10 +137,26 @@ const SecondSearchBlock = () => {
                     </div>
                 </LicenseBlock>
             </SearchType>
-            <Form>
+            <Form
+                onSubmit={handleSubmit(onSubmit)}
+            >
                 <MagnifyingGlassIcon />
-                <Button>Search</Button>
-                <Input placeholder="Enter a VIN Number" />
+                <Button onClick={() => { setValidation(true) }}>
+                    Search
+                </Button>
+                <Input
+                    value={userData}
+                    {...register("userData", {
+                        required: true
+                    })}
+                    onChange={(event) => {
+                        setValue("userData", event.target.value, { shouldValidate: true });
+                    }}
+                    placeholder="Enter a VIN Number"
+                    style={
+                        validation && errors.userData ?
+                            { outline: "4px solid rgba(255, 206, 227, 0.7)" } : null}
+                />
             </Form>
             <AdditionalText>
                 Don’t have a VIN? START HERE, search later.

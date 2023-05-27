@@ -6,8 +6,8 @@ import { useEffect, useRef, useState } from "react";
 const MainWrapper = styled.section`
 position: relative;
 margin: 0 auto;
+margin-top: 160px;
 width: 1184px;
-margin-bottom: 125px;
 overflow: hidden;
 `
 const ArrowLeftIcon = styled(ArrowLeft)`
@@ -34,10 +34,9 @@ background-color: white;
 border-radius: 100%;
 `
 const ReviewBlocks = styled.div`
-transform: translateX(-25%);
+transform: translateX(-1184px);
 display: flex;
-width: 400%;
-transition-duration: 800ms;
+width: 300%;
 `
 const ReviewBlock = styled.div`
 margin: 0 auto;
@@ -89,98 +88,92 @@ width: 64px;
 height: 52px;
 `
 const Reviews = () => {
-    const [currentReview, setCurrentReview] = useState(2);
+    const [currentReview, setCurrentReview] = useState(0);
+    const [btnDisabled, setBtnDisabled] = useState(false);
+    const [reviewsElements, setReviewsElements] = useState();
     const reviewBlocks = useRef();
     const handleClick = (type) => {
+        reviewBlocks.current.style.transitionDuration = '800ms';
+        setBtnDisabled(true);
+        const blockWidth = getComputedStyle(reviewBlocks.current).width.replace('px', '') / 3;
         if (type === 'left') {
-            if (currentReview > 1) {
+            reviewBlocks.current.style.transform = 'translateX(0%)'
+            if (currentReview > 0) {
                 setCurrentReview(currentReview - 1)
-            }
+            } else { setCurrentReview(3) }
         }
         if (type === 'right') {
-            if (currentReview < 4) {
+            reviewBlocks.current.style.transform = `translateX(-${blockWidth * 2}px)`;
+            if (currentReview < 3) {
                 setCurrentReview(currentReview + 1)
-            }
+            } else { setCurrentReview(0) }
         }
     }
-    useEffect(() => {
-        switch (currentReview) {
-            case 1:
-                reviewBlocks.current.style.transform = 'translateX(0%)';
-                break;
-            case 2:
-                reviewBlocks.current.style.transform = 'translateX(-25%)';
-                break;
-            case 3:
-                reviewBlocks.current.style.transform = 'translateX(-50%)';
-                break;
-            case 4:
-                reviewBlocks.current.style.transform = 'translateX(-75%)';
-                break;
-            default:
-                break;
+    const reviewsData = [
+        {
+            text: "This platform is awesome! I've been waiting for a tool that actually enables us to source candidates easily using referrals.This is the future!",
+            author: 'BRIAN BROWN',
+            authorOrganization: 'UPS'
+        },
+        {
+            text: "This platform is awesome! I've been waiting for a tool that actually enables us to source candidates easily using referrals.This is the future!",
+            author: 'BRIAN BROWN',
+            authorOrganization: 'UPS'
+        },
+        {
+            text: "This platform is awesome! I've been waiting for a tool that actually enables us to source candidates easily using referrals.This is the future!",
+            author: 'BRIAN BROWN',
+            authorOrganization: 'UPS'
+        },
+        {
+            text: "This platform is awesome! I've been waiting for a tool that actually enables us to source candidates easily using referrals.This is the future!",
+            author: 'BRIAN BROWN',
+            authorOrganization: 'UPS'
         }
+    ];
+    useEffect(() => {
+        const blockWidth = getComputedStyle(reviewBlocks.current).width.replace('px', '') / 3;
+        let reviewSet = [];
+        let index = currentReview;
+        setTimeout(() => {
+            reviewBlocks.current.style.transitionDuration = 'unset';
+            for (let i = -1; i < 2; i++) {
+                reviewSet.push(
+                    <ReviewBlock key={index}>
+                        <UnionIcon />
+                        <ReviewHolder>
+                            {reviewsData[index].text}
+                        </ReviewHolder>
+                        <ReviewAuthor>
+                            {reviewsData[index].author}
+                            <br />
+                            <span>{reviewsData[index].authorOrganization}</span>
+                        </ReviewAuthor>
+                    </ReviewBlock>
+                )
+                if (index < 3) {
+                    index = index + 1;
+                } else { index = 0 }
+                reviewBlocks.current.style.transform = `translateX(-${blockWidth}px)`
+            }
+            setReviewsElements(reviewSet);
+            setBtnDisabled(false);
+        }, reviewsElements ? 800 : 0)
+
     }, [currentReview])
     return (
         <MainWrapper>
-            <ArrowLeftIcon onClick={() => { handleClick('left') }} />
-            <ArrowRightIcon onClick={() => { handleClick('right') }} />
+            <ArrowLeftIcon onClick={() => { if (!btnDisabled) { handleClick('left') } }} />
+            <ArrowRightIcon onClick={() => { if (!btnDisabled) { handleClick('right') } }} />
 
             <ReviewBlocks ref={reviewBlocks}>
-                <ReviewBlock>
-                    <UnionIcon />
-                    <ReviewHolder>
-                        This platform is awesome! I've been waiting for a tool that actually enables
-                        us to source candidates easily using referrals. This is the future!
-                    </ReviewHolder>
-                    <ReviewAuthor>
-                        BRIAN BROWN
-                        <br />
-                        <span>UPS</span>
-                    </ReviewAuthor>
-                </ReviewBlock>
-                <ReviewBlock>
-                    <UnionIcon />
-                    <ReviewHolder>
-                        This platform is awesome! I've been waiting for a tool that actually enables
-                        us to source candidates easily using referrals. This is the future!
-                    </ReviewHolder>
-                    <ReviewAuthor>
-                        BRIAN BROWN
-                        <br />
-                        <span>UPS</span>
-                    </ReviewAuthor>
-                </ReviewBlock>
-                <ReviewBlock>
-                    <UnionIcon />
-                    <ReviewHolder>
-                        This platform is awesome! I've been waiting for a tool that actually enables
-                        us to source candidates easily using referrals. This is the future!
-                    </ReviewHolder>
-                    <ReviewAuthor>
-                        BRIAN BROWN
-                        <br />
-                        <span>UPS</span>
-                    </ReviewAuthor>
-                </ReviewBlock>
-                <ReviewBlock>
-                    <UnionIcon />
-                    <ReviewHolder>
-                        This platform is awesome! I've been waiting for a tool that actually enables
-                        us to source candidates easily using referrals. This is the future!
-                    </ReviewHolder>
-                    <ReviewAuthor>
-                        BRIAN BROWN
-                        <br />
-                        <span>UPS</span>
-                    </ReviewAuthor>
-                </ReviewBlock>
+                {reviewsElements}
             </ReviewBlocks>
             <Nav>
+                <NavElement style={currentReview === 3 ? { backgroundColor: '#D5DBE1' } : null} />
+                <NavElement style={currentReview === 0 ? { backgroundColor: '#D5DBE1' } : null} />
                 <NavElement style={currentReview === 1 ? { backgroundColor: '#D5DBE1' } : null} />
                 <NavElement style={currentReview === 2 ? { backgroundColor: '#D5DBE1' } : null} />
-                <NavElement style={currentReview === 3 ? { backgroundColor: '#D5DBE1' } : null} />
-                <NavElement style={currentReview === 4 ? { backgroundColor: '#D5DBE1' } : null} />
             </Nav>
         </MainWrapper>
     )

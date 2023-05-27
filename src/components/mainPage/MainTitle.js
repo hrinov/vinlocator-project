@@ -1,7 +1,7 @@
 import styled from "styled-components";
 const MainWrapper = styled.section`
-height: 240px;
-padding-top: 20px;
+height: 200px;
+padding-top: 70px;
 display: flex;
 align-items: center;
 justify-content: center;

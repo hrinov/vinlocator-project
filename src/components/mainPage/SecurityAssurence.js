@@ -1,7 +1,6 @@
 import styled from "styled-components";
 import { ReactComponent as Shield } from '../../images/shield.svg';
 const MainWrapper = styled.div`
-transform: translateY(-100px);
 margin: 0 auto;
 width: 1030px;
 height: 430px;
@@ -9,8 +8,8 @@ display: flex;
 justify-content: space-between;
 `
 const ShieldIcon = styled(Shield)`
-height: 469px;
-width: 408px;
+height: 387px;
+width: 470px;
 `
 const InfoBlockWrapper = styled.div`
 margin-top: 150px;
