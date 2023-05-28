@@ -1,12 +1,12 @@
 import styled from "styled-components";
 import { ReactComponent as Logo } from '../../icons/logo-white.svg';
+import { useNavigate } from "react-router-dom";
 const MainWrapper = styled.div`
 box-sizing: border-box;
 position: relative;
 height: 740px;
 padding-top: 220px;
 background-color: black;
-
 `
 const DataWrapper = styled.section`
 overflow: hidden;
@@ -83,17 +83,24 @@ const Rights = styled.div`
 font-weight: 400;
 `
 const LinksWrapper = styled.div`
-width: 255px;
+width: 200px;
 display: flex;
 justify-content: space-between;
-a {
+span {
+    text-decoration-color: none;
     display: block;
     font-weight: 500; 
     text-decoration: none;
+    color: white !important;
     cursor: pointer;
 }
 `
 const Footer = () => {
+    const navigate = useNavigate();
+    const handleClick = (link) => {
+        navigate(link)
+        window.scrollTo({ top: 0, behavior: "auto" })
+    }
     return (
         <MainWrapper>
             <DataWrapper>
@@ -130,8 +137,8 @@ const Footer = () => {
                         © 2023 Vinlocator.com, all rights reserved. Bumper™, and the BUMPER logo are trademarks of Bumper LLC.
                     </Rights>
                     <LinksWrapper>
-                        <a>Terms & Conditions</a>
-                        <a>Privacy Policy</a>
+                        <span onClick={() => { handleClick('/terms-of-use') }}>Terms of use</span>
+                        <span onClick={() => { handleClick('/privacy-policy') }}>Privacy Policy</span>
                     </LinksWrapper>
                 </EndBlock>
             </DataWrapper>

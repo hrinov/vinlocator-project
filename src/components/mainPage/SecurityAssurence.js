@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import { ReactComponent as Shield } from '../../images/shield.svg';
+import shield from '../../images/shield.png';
 const MainWrapper = styled.div`
 margin: 0 auto;
 width: 1030px;
@@ -7,7 +7,7 @@ height: 430px;
 display: flex;
 justify-content: space-between;
 `
-const ShieldIcon = styled(Shield)`
+const ShieldIcon = styled.img`
 height: 387px;
 width: 470px;
 `
@@ -34,7 +34,7 @@ letter-spacing: 0.015em;
 const SecurityAssurence = () => {
     return (
         <MainWrapper>
-            <ShieldIcon />
+            <ShieldIcon src={shield} />
             <InfoBlockWrapper>
                 <InfoBlockTitle>Vehicle safety</InfoBlockTitle>
                 <InfoBlock>

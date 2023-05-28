@@ -1,15 +1,6 @@
 import styled from "styled-components";
 import { ReactComponent as Logo } from '../../icons/logo-black.svg';
-import firstBlueLineralGr from '../../images/first-blue-lineral-gr.svg'
-const GradientBlock = styled.div`
-position: absolute;
-width: 1440px;
-left: 50vw;
-transform: translateX(-50%);
-height: 1318px;
-z-index: -10;
-background-image: url(${firstBlueLineralGr});
-`
+import { useNavigate } from "react-router-dom";
 const MainWrapper = styled.section`
 overflow: hidden;
 margin: 0 auto;
@@ -17,12 +8,13 @@ display: flex;
 justify-content: space-between;
 width: 1112px;
 height: 88px;
-border-bottom: 1px solid #D5DBE1;
+border-bottom: ${props => props.borderLine ? '1px solid #D5DBE1' : 'none'} 
 `
 const LogoBlock = styled.div`
 display: flex;
 align-items: center;
 height: 100%;
+cursor: pointer;
 `
 const EndBlock = styled.div`
 display: flex;
@@ -52,25 +44,23 @@ const LogoIcon = styled.div`
 height: 125px;
 transform: translateX(-37px)
 `
-const Header = () => {
+const Header = ({ borderLine }) => {
+    const navigate = useNavigate();
     return (
-        <>
-            <GradientBlock />
-            <MainWrapper>
-                <LogoBlock>
-                    <LogoIcon>
-                        <Logo style={{ height: '100%' }} />
-                    </LogoIcon>
-                </LogoBlock>
+        <MainWrapper borderLine={borderLine}>
+            <LogoBlock onClick={() => { navigate('/') }}>
+                <LogoIcon>
+                    <Logo style={{ height: '100%' }} />
+                </LogoIcon>
+            </LogoBlock>
 
-                <EndBlock>
-                    <InfoBlock>Questions?</InfoBlock>
-                    <InfoBlock>X-XXX-XXX-XXXX</InfoBlock>
-                    <Button>Login In</Button>
-                    <Button>Sign Up</Button>
-                </EndBlock>
-            </MainWrapper>
-        </>
+            <EndBlock>
+                <InfoBlock>Questions?</InfoBlock>
+                <InfoBlock>X-XXX-XXX-XXXX</InfoBlock>
+                <Button>Login In</Button>
+                <Button>Sign Up</Button>
+            </EndBlock>
+        </MainWrapper>
     )
 
 }
