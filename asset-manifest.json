@@ -1,17 +1,27 @@
 {
   "files": {
-    "main.js": "/vinlocator-project/static/js/main.628dff31.js",
+    "main.css": "/vinlocator-project/static/css/main.c2cab247.css",
+    "main.js": "/vinlocator-project/static/js/main.9b7673e0.js",
     "static/media/second-blue-lineral-gr.svg": "/vinlocator-project/static/media/second-blue-lineral-gr.592e298d51addb2bff8f8f6dba3b0620.svg",
     "static/media/shield.png": "/vinlocator-project/static/media/shield.6e47a0351a5ed3580ca0.png",
     "static/media/first-3d-car.svg": "/vinlocator-project/static/media/first-3d-car.fc8b31995ab6fd45109e2a0f3aca8392.svg",
+    "static/media/animated-car-3.svg": "/vinlocator-project/static/media/animated-car-3.abc6763f1b14c355276b8374568b2977.svg",
+    "static/media/animated-car-1.svg": "/vinlocator-project/static/media/animated-car-1.2f4cac9d7fba0547a3435cdcc72251d5.svg",
+    "static/media/animated-car-9.svg": "/vinlocator-project/static/media/animated-car-9.feaf049da97a59c3c18cac007ac5ceac.svg",
+    "static/media/animated-car-8.svg": "/vinlocator-project/static/media/animated-car-8.2b9a1a93f3cbabdcd0ac33b55fff9ca1.svg",
+    "static/media/animated-car-7.svg": "/vinlocator-project/static/media/animated-car-7.9ab96408f265b165af85fb6d609d9ab8.svg",
+    "static/media/animated-car-2.svg": "/vinlocator-project/static/media/animated-car-2.8038efb4672c3404efd38148e4ade2ff.svg",
+    "static/media/animated-car-5.svg": "/vinlocator-project/static/media/animated-car-5.70cf37d5eb4cc981a7741c9850697063.svg",
+    "static/media/animated-car-4.svg": "/vinlocator-project/static/media/animated-car-4.db378b7d2f476e74e5270c869737993b.svg",
+    "static/media/animated-car-6.svg": "/vinlocator-project/static/media/animated-car-6.c4ee3b9a2ce1fcd0034966e8dcc27f26.svg",
     "static/media/logo-black.svg": "/vinlocator-project/static/media/logo-black.c56ccd466dd9f397417003ccb6c83d8c.svg",
     "static/media/logo-white.svg": "/vinlocator-project/static/media/logo-white.417852ed55965be64090261680bf770a.svg",
     "static/media/union.svg": "/vinlocator-project/static/media/union.a0b3415c4649eec95e0ff401f42c2d1d.svg",
     "static/media/smart-car.svg": "/vinlocator-project/static/media/smart-car.1f38ad7eab2064d30d3b53e6277611fe.svg",
     "static/media/car.svg": "/vinlocator-project/static/media/car.a81a1cc7c9b8147f42599040e660b297.svg",
     "static/media/shop.svg": "/vinlocator-project/static/media/shop.4d58508b32cbdee1e520eb83d4457cc4.svg",
-    "static/media/user-square.svg": "/vinlocator-project/static/media/user-square.37634c3ab6d8e3be8166d5ade36d6afd.svg",
     "index.html": "/vinlocator-project/index.html",
+    "static/media/user-square.svg": "/vinlocator-project/static/media/user-square.37634c3ab6d8e3be8166d5ade36d6afd.svg",
     "static/media/card-tick.svg": "/vinlocator-project/static/media/card-tick.0e04ead093ba109a7599e17efce07c15.svg",
     "static/media/lock-slash.svg": "/vinlocator-project/static/media/lock-slash.d24a9772ce571f5ef19ece2aae1c4301.svg",
     "static/media/dollar-square.svg": "/vinlocator-project/static/media/dollar-square.50cd8019ff945009e9769bf4c50f3a93.svg",
@@ -26,9 +36,11 @@
     "static/media/arrow-right.svg": "/vinlocator-project/static/media/arrow-right.cc99b90d054e8c7382badf7c3244bde7.svg",
     "static/media/arrow-left.svg": "/vinlocator-project/static/media/arrow-left.a2ca16e0c38ed0cff13226b17a3a53f0.svg",
     "static/media/rectangle511.svg": "/vinlocator-project/static/media/rectangle511.19bbdc6884cac7392d593d67e0e1fc02.svg",
-    "main.628dff31.js.map": "/vinlocator-project/static/js/main.628dff31.js.map"
+    "main.c2cab247.css.map": "/vinlocator-project/static/css/main.c2cab247.css.map",
+    "main.9b7673e0.js.map": "/vinlocator-project/static/js/main.9b7673e0.js.map"
   },
   "entrypoints": [
-    "static/js/main.628dff31.js"
+    "static/css/main.c2cab247.css",
+    "static/js/main.9b7673e0.js"
   ]
 }
