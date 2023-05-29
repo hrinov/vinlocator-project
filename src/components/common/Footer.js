@@ -98,8 +98,7 @@ span {
 const Footer = () => {
     const navigate = useNavigate();
     const handleClick = (link) => {
-        navigate(link)
-        window.scrollTo({ top: 0, behavior: "auto" })
+        navigate(link);
     }
     return (
         <MainWrapper>

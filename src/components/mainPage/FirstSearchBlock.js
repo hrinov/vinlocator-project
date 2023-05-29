@@ -2,6 +2,7 @@ import styled from "styled-components"
 import { ReactComponent as MagnifyingGlass } from '../../icons/magnifying-glass.svg';
 import { useEffect, useState } from "react";
 import { useForm } from "react-hook-form";
+import { useNavigate } from "react-router-dom";
 const MainWrapper = styled.section`
 margin: 0 auto;
 height: 284px;
@@ -91,7 +92,8 @@ text-align: center;
 `
 const FirstSearchBlock = () => {
     const [searchType, setSearchType] = useState('VIN');
-    const [validation, setValidation] = useState(false)
+    const [validation, setValidation] = useState(false);
+    const navigate = useNavigate();
     const {
         register,
         handleSubmit,
@@ -101,7 +103,10 @@ const FirstSearchBlock = () => {
     } = useForm();
     const userData = watch("userData") ? watch("userData") : "";
     const onSubmit = (data) => {
-        console.log(searchType, data.userData)
+        console.log(searchType, data.userData);
+        setTimeout(() => {
+            navigate('/pre-search');
+        }, 300)
     };
     useEffect(() => {
         if (validation) {

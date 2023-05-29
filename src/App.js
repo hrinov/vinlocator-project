@@ -1,4 +1,5 @@
 import { createGlobalStyle } from "styled-components";
+import ScrollToTop from "./components/common/ScrollToTop";
 import MainPage from "./pages/MainPage";
 import PrivacyPolicyPage from "./pages/PrivacyPolicyPage";
 import TermsOfUsePage from "./pages/TermsOfUsePage";
@@ -13,7 +14,8 @@ function App() {
   return (
     <>
       <GlobalStyle />
-      <BrowserRouter basename="/vinlocator-project">
+      <BrowserRouter>
+        <ScrollToTop />
         <Routes>
           <Route
             path={'/'}
@@ -41,5 +43,3 @@ function App() {
   );
 }
 export default App;
-
-//we should change or deite basename in result
