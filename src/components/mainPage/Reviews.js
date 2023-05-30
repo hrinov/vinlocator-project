@@ -9,6 +9,18 @@ margin: 0 auto;
 margin-top: 160px;
 width: 1184px;
 overflow: hidden;
+@media (max-width: 1439px) {
+width: 900px;
+};
+@media (max-width: 1023px) {
+   width: 706px;
+};
+@media (max-width: 767px) {
+
+};
+@media (max-width: 424px) {
+
+}
 `
 const ArrowLeftIcon = styled(ArrowLeft)`
 display: block;
@@ -45,6 +57,19 @@ min-height: 445px;
 display: flex;
 align-items: center;
 flex-direction: column;
+@media (max-width: 1439px) {
+    width: 900px;
+};
+@media (max-width: 1023px) {
+    min-height: 405px;
+   width: 800px;
+};
+@media (max-width: 767px) {
+
+};
+@media (max-width: 424px) {
+
+}
 `
 const ReviewHolder = styled.div`
 width: 840px;
@@ -53,10 +78,24 @@ font-size: 40px;
 line-height: 44px;
 margin-top: 50px;
 text-align: center;
+@media (max-width: 1439px) {
+    width: 800px;
+    font-size: 34px;
+};
+@media (max-width: 1023px) {
+    margin-top: 40px;
+    width: 550px;
+    font-size: 28px;
+};
+@media (max-width: 767px) {
+
+};
+@media (max-width: 424px) {
+
+}
 `
 const ReviewAuthor = styled.div`
 margin-top: 10px;
-width: 840px;
 font-weight: 400;
 font-size: 15px;
 margin-top: 50px;
@@ -86,6 +125,18 @@ border: 2px solid #D5DBE1;
 const UnionIcon = styled(Union)`
 width: 64px;
 height: 52px;
+@media (max-width: 1439px) {
+
+};
+@media (max-width: 1023px) {
+height: 45px;
+};
+@media (max-width: 767px) {
+
+};
+@media (max-width: 424px) {
+
+}
 `
 const Reviews = () => {
     const [currentReview, setCurrentReview] = useState(0);

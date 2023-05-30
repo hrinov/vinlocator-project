@@ -8,7 +8,19 @@ display: flex;
 justify-content: space-between;
 width: 1112px;
 height: 88px;
-border-bottom: ${props => props.borderLine ? '1px solid #D5DBE1' : 'none'} 
+border-bottom: ${props => props.borderLine ? '1px solid #D5DBE1' : 'none'};
+@media (max-width: 1439px) {
+width: 900px;
+};
+@media (max-width: 1023px) {
+  width: 706px;
+};
+@media (max-width: 767px) {
+ width: 420px;
+};
+@media (max-width: 424px) {
+ 
+}
 `
 const LogoBlock = styled.div`
 display: flex;
@@ -34,11 +46,37 @@ cursor: pointer;
 :hover{
     background-color: #50dff5
 }
+@media (max-width: 1439px) {
+
+};
+@media (max-width: 1023px) {
+
+};
+@media (max-width: 767px) {
+    font-size: 12px;
+width: 80px;
+height: 35px;
+};
+@media (max-width: 424px) {
+ 
+}
 `
 const InfoBlock = styled.div`
 font-weight: 500;
 font-size: 14px;
 margin-left: 10px;
+@media (max-width: 1439px) {
+
+};
+@media (max-width: 1023px) {
+
+};
+@media (max-width: 767px) {
+ display: none
+};
+@media (max-width: 424px) {
+ 
+}
 `
 const LogoIcon = styled.div`
 height: 125px;

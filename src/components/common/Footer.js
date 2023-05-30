@@ -7,6 +7,18 @@ position: relative;
 height: 740px;
 padding-top: 220px;
 background-color: black;
+@media (max-width: 1439px) {
+
+};
+@media (max-width: 1023px) {
+padding-top: 180px;
+};
+@media (max-width: 767px) {
+
+};
+@media (max-width: 424px) {
+
+}
 `
 const DataWrapper = styled.section`
 overflow: hidden;
@@ -15,6 +27,18 @@ display: flex;
 flex-direction: column;
 align-items: center;
 width: 1112px;
+@media (max-width: 1439px) {
+width: 900px;
+};
+@media (max-width: 1023px) {
+width: 706px;
+};
+@media (max-width: 767px) {
+
+};
+@media (max-width: 424px) {
+
+}
 `
 const LogoButtonsWrapper = styled.div`
 display: flex;
@@ -47,11 +71,35 @@ cursor: pointer;
 :hover{
     background-color: #50dff5
 }
+@media (max-width: 1439px) {
+
+};
+@media (max-width: 1023px) {
+font-size: 12px;
+};
+@media (max-width: 767px) {
+
+};
+@media (max-width: 424px) {
+
+}
 `
 const InfoBlock = styled.div`
 font-weight: 500;
 font-size: 14px;
 margin-left: 10px;
+@media (max-width: 1439px) {
+font-size: 13px;
+};
+@media (max-width: 1023px) {
+font-size: 12px;
+};
+@media (max-width: 767px) {
+
+};
+@media (max-width: 424px) {
+
+}
 `
 const LogoIcon = styled.div`
 height: 125px;
@@ -66,6 +114,18 @@ color: white;
  font-weight: 400;
 span{
     font-weight: 700;
+}
+@media (max-width: 1439px) {
+font-size: 13px;
+};
+@media (max-width: 1023px) {
+font-size: 12px;
+};
+@media (max-width: 767px) {
+
+};
+@media (max-width: 424px) {
+
 }
 `
 const EndBlock = styled.div`

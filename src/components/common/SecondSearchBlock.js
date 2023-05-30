@@ -14,8 +14,21 @@ align-items: center;
 justify-content: center;
 background: linear-gradient(234deg, #FFFFFF -15.85%, #3AD0E6 97.11%);
 border-radius: 6px;
-transform: translateY(152px);
+transform: translateY(137px);
 z-index: 10;
+@media (max-width: 1439px) {
+width: 900px;
+};
+@media (max-width: 1023px) {
+    height: 260px;
+width: 706px;
+};
+@media (max-width: 767px) {
+
+};
+@media (max-width: 424px) {
+
+}
 `
 const SearchType = styled.div`
 width: 536px;

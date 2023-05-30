@@ -5,11 +5,23 @@ import { useForm } from "react-hook-form";
 import { useNavigate } from "react-router-dom";
 const MainWrapper = styled.section`
 margin: 0 auto;
-height: 284px;
+height: 395px;
 width: 536px;
 display: flex;
 flex-direction: column;
 align-items: center;
+@media (max-width: 1439px) {
+height: 360px;
+};
+@media (max-width: 1023px) {
+height: 320px;
+};
+@media (max-width: 767px) {
+width: 380px;
+};
+@media (max-width: 424px) {
+
+}
 `
 const SearchType = styled.div`
 width: 100%;
@@ -18,9 +30,24 @@ display: flex;
 justify-content: space-between;
 padding-left: 50px;
 padding-right: 50px;
+padding-top: 45px;
 margin: 30px auto 20px auto;
 font-weight: 700;
 font-size: 20px;
+@media (max-width: 1439px) {
+   padding-top: 40px; 
+};
+@media (max-width: 1023px) {
+
+};
+@media (max-width: 767px) {
+    margin: 30px auto 15px auto;
+    font-size: 15px;
+   padding-top: 10px; 
+};
+@media (max-width: 424px) {
+
+}
 `
 const VinBlock = styled.div`
 display: flex;
@@ -30,6 +57,18 @@ width: 163px;
 height: 33px;
 border-bottom: 2px solid ${props => (props.bottomLine)};
 color: ${props => (props.color)};
+@media (max-width: 1439px) {
+
+};
+@media (max-width: 1023px) {
+
+};
+@media (max-width: 767px) {
+width: 126px;
+};
+@media (max-width: 424px) {
+
+}
 `
 const LicenseBlock = styled.div`
 display: flex;
@@ -39,6 +78,18 @@ width: 163px;
 height: 33px;
 border-bottom: 2px solid ${props => (props.bottomLine)};
 color: ${props => (props.color)};
+@media (max-width: 1439px) {
+
+};
+@media (max-width: 1023px) {
+
+};
+@media (max-width: 767px) {
+width: 126px;
+};
+@media (max-width: 424px) {
+
+}
 `
 const Input = styled.input`
 margin: 0 auto;
@@ -58,6 +109,21 @@ box-shadow: 0px 0px 4px 6px rgba(0, 0, 0, 0.04), inset 0px 4px 4px rgba(0, 0, 0,
     font-weight: 200;
     font-size: 20px;
     color: #3A3A3A;
+}
+@media (max-width: 1439px) {
+
+};
+@media (max-width: 1023px) {
+
+};
+@media (max-width: 767px) {
+ height: 55px;
+  ::placeholder{
+    font-size: 16px;
+}
+};
+@media (max-width: 424px) {
+
 }
 `
 const MagnifyingGlassIcon = styled(MagnifyingGlass)`
@@ -82,6 +148,21 @@ margin-left: 10px;
 cursor: pointer;
 :hover{
    background-color: #50dff5; 
+}
+@media (max-width: 1439px) {
+
+};
+@media (max-width: 1023px) {
+
+};
+@media (max-width: 767px) {
+    font-weight: 600;
+    font-size: 18px;
+width: 96px;
+height: 39px;
+};
+@media (max-width: 424px) {
+
 }
 `
 const AdditionalText = styled.div`

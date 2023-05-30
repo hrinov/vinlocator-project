@@ -6,24 +6,75 @@ width: 1030px;
 height: 430px;
 display: flex;
 justify-content: space-between;
+@media (max-width: 1439px) {
+    width: 900px;
+    height: 320px;
+};
+@media (max-width: 1023px) {
+    margin-top: 100px;
+    width: 706px;
+    height: 290px;
+};
+@media (max-width: 767px) {
+};
+@media (max-width: 424px) {
+
+}
 `
 const ShieldIcon = styled.img`
-height: 387px;
+height: 357px;
 width: 470px;
+@media (max-width: 1439px) {
+    width: 400px;
+};
+@media (max-width: 1023px) {
+    height: 287px;
+    width: 345px;
+};
+@media (max-width: 767px) {
+
+};
+@media (max-width: 424px) {
+
+}
 `
 const InfoBlockWrapper = styled.div`
-margin-top: 150px;
+margin-top: 84px;
 width: 491px;
 display: flex;
 flex-direction: column;
 span{
     font-weight: 700
 }
+@media (max-width: 1439px) {
+margin-top: 80px;
+};
+@media (max-width: 1023px) {
+margin-top: 20px;
+};
+@media (max-width: 767px) {
+
+};
+@media (max-width: 424px) {
+
+}
 `
 const InfoBlockTitle = styled.div`
 font-weight: 600;
 font-size: 26px;
 margin-bottom: 10px;
+@media (max-width: 1439px) {
+font-size: 20px;
+};
+@media (max-width: 1023px) {
+font-size: 17px;
+};
+@media (max-width: 767px) {
+
+};
+@media (max-width: 424px) {
+
+}
 `
 const InfoBlock = styled.div`
 font-weight: 400;

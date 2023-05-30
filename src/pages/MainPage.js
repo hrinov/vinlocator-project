@@ -16,6 +16,20 @@ transform: translateX(-50%);
 height: 1318px;
 z-index: -10;
 background-image: url(${firstBlueLineralGr});
+background-size: cover;
+@media (max-width: 1439px) {
+    width: 100%;
+    height: 1256px;
+};
+@media (max-width: 1023px) {
+    height: 1172px;
+};
+@media (max-width: 767px) {
+
+};
+@media (max-width: 424px) {
+
+}
 `
 const MainPage = () => {
     return (
