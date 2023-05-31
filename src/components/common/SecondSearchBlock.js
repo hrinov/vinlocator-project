@@ -21,10 +21,11 @@ width: 900px;
 };
 @media (max-width: 1023px) {
     height: 260px;
-width: 706px;
+    width: 706px;
 };
 @media (max-width: 767px) {
-
+        height: 220px;
+width: 410px;
 };
 @media (max-width: 424px) {
 
@@ -40,6 +41,21 @@ padding-right: 50px;
 margin: 30px auto 20px auto;
 font-weight: 700;
 font-size: 20px;
+@media (max-width: 1439px) {
+ 
+};
+@media (max-width: 1023px) {
+
+};
+@media (max-width: 767px) {
+    width: 380px;
+    margin: 0px auto 15px auto;
+    font-size: 15px;
+   padding-top: 5px; 
+};
+@media (max-width: 424px) {
+
+}
 `
 const VinBlock = styled.div`
 display: flex;
@@ -48,6 +64,18 @@ justify-content: center;
 width: 163px;
 height: 33px;
 border-bottom: 2px solid ${props => (props.bottomLine)};
+@media (max-width: 1439px) {
+
+};
+@media (max-width: 1023px) {
+
+};
+@media (max-width: 767px) {
+width: 126px;
+};
+@media (max-width: 424px) {
+
+}
 `
 const LicenseBlock = styled.div`
 display: flex;
@@ -56,10 +84,34 @@ justify-content: center;
 width: 163px;
 height: 33px;
 border-bottom: 2px solid ${props => (props.bottomLine)};
+@media (max-width: 1439px) {
+
+};
+@media (max-width: 1023px) {
+
+};
+@media (max-width: 767px) {
+width: 126px;
+};
+@media (max-width: 424px) {
+
+}
 `
 const Form = styled.form`
 position: relative;
 width: 536px;
+@media (max-width: 1439px) {
+
+};
+@media (max-width: 1023px) {
+
+};
+@media (max-width: 767px) {
+    width: 380px;
+};
+@media (max-width: 424px) {
+
+}
 `
 const Input = styled.input`
 display: block;
@@ -80,6 +132,22 @@ box-shadow: 0px 0px 0px 6px rgba(0, 0, 0, 0.04), inset 0px 4px 4px rgba(0, 0, 0,
     font-weight: 200;
     font-size: 20px;
     color: #3A3A3A;
+}
+@media (max-width: 1439px) {
+
+};
+@media (max-width: 1023px) {
+
+};
+@media (max-width: 767px) {
+    width: 380px;
+    height: 55px;
+    ::placeholder{
+    font-size: 16px;
+}
+};
+@media (max-width: 424px) {
+
 }
 `
 const MagnifyingGlassIcon = styled(MagnifyingGlass)`
@@ -105,12 +173,39 @@ cursor: pointer;
 :hover{
    background-color: #50dff5; 
 }
+@media (max-width: 1439px) {
+
+};
+@media (max-width: 1023px) {
+
+};
+@media (max-width: 767px) {
+    font-weight: 600;
+    font-size: 18px;
+width: 96px;
+height: 39px;
+};
+@media (max-width: 424px) {
+
+}
 `
 const AdditionalText = styled.div`
 margin-top: 11px;
 font-weight: 400;
 font-size: 14px;
 text-align: center;
+@media (max-width: 1439px) {
+
+};
+@media (max-width: 1023px) {
+
+};
+@media (max-width: 767px) {
+    font-size: 13px;
+}
+@media (max-width: 424px) {
+
+}
 `
 const SecondSearchBlock = () => {
     const [searchType, setSearchType] = useState('VIN');

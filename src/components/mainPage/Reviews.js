@@ -16,10 +16,11 @@ width: 900px;
    width: 706px;
 };
 @media (max-width: 767px) {
-
+   width: 420px;
 };
 @media (max-width: 424px) {
-
+       width: 316px;
+margin-top: 210px;
 }
 `
 const ArrowLeftIcon = styled(ArrowLeft)`
@@ -33,6 +34,22 @@ cursor: pointer;
 z-index: 10;
 background-color: white;
 border-radius: 100%;
+@media (max-width: 1439px) {
+
+};
+@media (max-width: 1023px) {
+
+};
+@media (max-width: 767px) {
+height: 45px;
+width: 45px;
+top: 136px;
+};
+@media (max-width: 424px) {
+top: 101px;
+height: 36px;
+width: 36px;
+}
 `
 const ArrowRightIcon = styled(ArrowRight)`
 position: absolute;
@@ -44,6 +61,22 @@ cursor: pointer;
 z-index: 10;
 background-color: white;
 border-radius: 100%;
+@media (max-width: 1439px) {
+
+};
+@media (max-width: 1023px) {
+
+};
+@media (max-width: 767px) {
+height: 45px;
+width: 45px;
+top: 136px;
+};
+@media (max-width: 424px) {
+top: 101px;
+height: 36px;
+width: 36px;
+}
 `
 const ReviewBlocks = styled.div`
 transform: translateX(-1184px);
@@ -57,18 +90,21 @@ min-height: 445px;
 display: flex;
 align-items: center;
 flex-direction: column;
+padding-bottom: 10px;
 @media (max-width: 1439px) {
     width: 900px;
 };
 @media (max-width: 1023px) {
     min-height: 405px;
-   width: 800px;
+    width: 800px;
 };
 @media (max-width: 767px) {
-
+    min-height: 330px;
+    width: 420px;
 };
 @media (max-width: 424px) {
-
+        min-height: 283px;
+    width: 316px;
 }
 `
 const ReviewHolder = styled.div`
@@ -88,10 +124,15 @@ text-align: center;
     font-size: 28px;
 };
 @media (max-width: 767px) {
-
+    width: 310px;
+    font-size: 20px;
+    line-height: 33px;
 };
 @media (max-width: 424px) {
-
+        width: 240px;
+    font-size: 16px;
+    line-height: 25px;
+   margin-top: 25px;
 }
 `
 const ReviewAuthor = styled.div`
@@ -107,6 +148,22 @@ span{
     font-size: 13px;
     color: #D5DBE1;
 }
+@media (max-width: 1439px) {
+
+};
+@media (max-width: 1023px) {
+
+};
+@media (max-width: 767px) {
+margin-top: 32px;
+};
+@media (max-width: 424px) {
+    font-size: 14px;
+   margin-top: 22px;
+   span{
+    margin-top: 2px;
+}
+}
 `
 const Nav = styled.div`
 margin: 0 auto;
@@ -115,12 +172,38 @@ height: 16px;
 display: flex;
 justify-content: space-between;
 margin-bottom: 5px;
+@media (max-width: 1439px) {
+
+};
+@media (max-width: 1023px) {
+
+};
+@media (max-width: 767px) {
+
+};
+@media (max-width: 424px) {
+width: 72px;
+}
 `
 const NavElement = styled.div`
 width: 16px;
 height: 16px;
 border-radius: 100%;
 border: 2px solid #D5DBE1;
+@media (max-width: 1439px) {
+
+};
+@media (max-width: 1023px) {
+
+};
+@media (max-width: 767px) {
+width: 14px;
+height: 14px;
+};
+@media (max-width: 424px) {
+   width: 13px;
+height: 13px;
+}
 `
 const UnionIcon = styled(Union)`
 width: 64px;
@@ -132,10 +215,10 @@ height: 52px;
 height: 45px;
 };
 @media (max-width: 767px) {
-
+height: 35px;
 };
 @media (max-width: 424px) {
-
+height: 31px;
 }
 `
 const Reviews = () => {

@@ -36,10 +36,12 @@ background-size: contain;
     height: 634px;
 };
 @media (max-width: 767px) {
-
+    top: -203px;
+    height: 645px;
 };
 @media (max-width: 424px) {
-
+    top: -98px;
+    height: 382px;
 }
 `
 const MainWrapper = styled.section`
@@ -55,27 +57,31 @@ align-items: center;
      width: 706px; 
 };
 @media (max-width: 767px) {
- 
+    width: 420px; 
 };
 @media (max-width: 424px) {
- 
+    width: 316px;
 }
 `
 const MainTitle = styled.h2`
 font-weight: 600;
 font-size: 32px;
 text-align: center;
+width: 756px;
 @media (max-width: 1439px) {
        
 };
 @media (max-width: 1023px) {
-  font-size: 28px;
+    width: 706px;
+    font-size: 28px;
  };
 @media (max-width: 767px) {
- 
+     width: 420px;
+     font-size: 20px;
 };
 @media (max-width: 424px) {
- 
+    width: 315px;
+    font-size: 18px;
 }
 `
 const AdditionalTitle = styled.div`
@@ -84,6 +90,7 @@ text-align: center;
 font-weight: 400;
 font-size: 18px;
 line-height: 26px;
+width: 933px;
     h1{
     font-size: 16px;
     display: inline;
@@ -97,12 +104,13 @@ font-size: 16px;
     font-size: 16px;
 }};
 @media (max-width: 1023px) {
-  font-size: 14px;
-   h1{
+    width: 706px;
+    font-size: 14px;
+    h1{
     font-size: 14px;
 }};
 @media (max-width: 767px) {
- 
+     width: 330px;
 };
 @media (max-width: 424px) {
  
@@ -114,6 +122,20 @@ height: 430px;
 display: flex;
 align-items: center;
 justify-content: space-between;
+@media (max-width: 1439px) {
+  
+};
+@media (max-width: 1023px) {
+
+};
+@media (max-width: 767px) {
+    margin-top: 45px;
+    flex-direction: column;
+    height: 460px;
+};
+@media (max-width: 424px) {
+  height: 530px;
+}
 `
 const InfoBlockWrapper = styled.div`
 width: 491px;
@@ -129,10 +151,11 @@ span{
    width: 279px; 
 };
 @media (max-width: 767px) {
-
+    width: 420px; 
+    text-align: center;
 };
 @media (max-width: 424px) {
-
+   width: 316px; 
 }
 `
 const InfoBlockTitle = styled.div`
@@ -146,7 +169,7 @@ font-size: 20px;
 font-size: 17px;
 };
 @media (max-width: 767px) {
-
+font-size: 18px;
 };
 @media (max-width: 424px) {
 
@@ -164,7 +187,7 @@ font-size: 12px;
 
 };
 @media (max-width: 767px) {
-
+font-size: 12px; 
 };
 @media (max-width: 424px) {
 
@@ -239,8 +262,45 @@ grid-auto-rows: 40px;
 
 };
 @media (max-width: 424px) {
-
+  display: none
 }
+`;
+const FirstGraphicBlockMobile = styled.div`
+display: none;
+    @media (max-width: 424px) {
+    display: grid;
+    grid-auto-rows: 35px;
+    row-gap: 10px;
+    .first-row-mobile {
+        column-gap: 7px;
+        display: grid;
+        grid-template-columns: 15px 151px 99px;
+    }
+    .second-row-mobile {
+        column-gap: 7px;
+        display: grid;
+        grid-template-columns: 29px 84px 82px 81px;
+    }
+    .third-row-mobile {
+        column-gap: 7px;
+        display: grid;
+        grid-template-columns: 126px 87px 87px;
+    }
+    .fourth-row-mobile{
+        column-gap: 7px;
+        display: grid;
+        grid-template-columns: 3px 87px 108px 100px;
+    }
+    .fifth-row-mobile {
+        column-gap: 7px;
+        display: grid;
+        grid-template-columns: 9px 124px 120px;
+    }
+    .sixth-row-mobile {
+        column-gap: 7px;
+        display: grid;
+        grid-template-columns: 9px 121px 134px;
+    }}
 `;
 const FirstGraphicBlockElement = styled.div`
 display: flex;
@@ -268,7 +328,8 @@ padding-right: 11px;
 
 };
 @media (max-width: 424px) {
-
+padding-left: 10px;
+padding-right: 10px;
 }
 `
 const SecondBlock = styled.div`
@@ -281,10 +342,11 @@ justify-content: space-between;
        
 };
 @media (max-width: 1023px) {
-height: 430px;
+    height: 430px;
  };
 @media (max-width: 767px) {
- 
+    height: 600px;
+    flex-direction: column-reverse;
 };
 @media (max-width: 424px) {
  
@@ -297,13 +359,13 @@ height: 480px;
        
 };
 @media (max-width: 1023px) {
-width: 415px;
+    width: 415px;
  };
 @media (max-width: 767px) {
- 
+
 };
 @media (max-width: 424px) {
- 
+ width: 316px;
 }
 `
 const ThirdBlock = styled.div`
@@ -334,13 +396,18 @@ border-radius: 30px;
     height: 265px;
     padding-left: 22px;
     padding-right: 20px;
-   width: 706px; 
+    width: 706px; 
 };
 @media (max-width: 767px) {
-
+    margin-top: 90px;
+    height: 250px;
+    width: 420px; 
 };
 @media (max-width: 424px) {
-
+    padding-left: 18px;
+    padding-right: 20px;
+    width: 316px;
+    height: 216px;
 }
 `
 const ListingsLabel = styled.div`
@@ -372,10 +439,16 @@ text-transform: uppercase;
     width: 108px;
 };
 @media (max-width: 767px) {
- 
+     top: -18px;
+    padding-left: 15px;
+    padding-right: 15px;
+    height: 34px;
+    width: 104px;
 };
 @media (max-width: 424px) {
- 
+    width: 103px;
+    left: unset;
+    right: 21px;
 }
 `
 const SalseListingLeftSideWrapper = styled.div`
@@ -390,7 +463,7 @@ grid-auto-rows: 28px;
   grid-auto-rows: 25px;
 };
 @media (max-width: 767px) {
- 
+
 };
 @media (max-width: 424px) {
  
@@ -413,17 +486,23 @@ color: rgba(0, 0, 0, 0.95);
 }
 };
 @media (max-width: 1023px) {
- span {
-font-weight: 500;
-font-size: 12px;
-color: rgba(0, 0, 0, 0.95);
-} 
+    span {
+    font-weight: 500;
+    font-size: 12px;
+    color: rgba(0, 0, 0, 0.95);
+    } 
 };
 @media (max-width: 767px) {
- 
+    font-size: 14px;
+    span {
+        font-size: 14px;
+    } 
 };
 @media (max-width: 424px) {
- 
+     font-size: 13px;
+    span {
+        font-size: 13px;
+    } 
 }
 `
 const SalesListingRightSideWrapper = styled.div`
@@ -440,10 +519,34 @@ width: 440px;
   width: 360px;
 };
 @media (max-width: 767px) {
- 
+   display: none
 };
 @media (max-width: 424px) {
  
+}
+`
+const ThirdBlockMobileInfoWrapper = styled.div`
+margin-top: 75px;
+width: 420px; 
+text-align: center;
+display: none;
+flex-direction: column;
+margin-bottom: 55px;
+span{
+    font-weight: 700
+}
+@media (max-width: 1439px) {
+
+};
+@media (max-width: 1023px) {
+ 
+};
+@media (max-width: 767px) {
+display: flex;
+};
+@media (max-width: 424px) {
+    margin-top: 85px;
+width: 316px; 
 }
 `
 const FourthBlock = styled.div`
@@ -464,10 +567,14 @@ justify-content: space-between;
       width: 706px; 
 };
 @media (max-width: 767px) {
-        height: 520px;
+    width: 420px;
+    padding-top: 40px;
+    height: 638px;
+    flex-direction: column-reverse;
 };
 @media (max-width: 424px) {
-
+    width: 316px;
+     height: 717px;
 }
 `
 const FourthGraphicBlockElement = styled(Second3dCar)`
@@ -480,7 +587,8 @@ height: 659px;
     width: 360px;
  };
 @media (max-width: 767px) {
- 
+    height: 359px;
+     width: 330px;
 };
 @media (max-width: 424px) {
 }
@@ -499,7 +607,8 @@ height: 24px;
  
 };
 @media (max-width: 424px) {
- 
+     width: 17px;
+    height: 17px;
 }
 `
 const ServiceDescription = () => {
@@ -507,14 +616,11 @@ const ServiceDescription = () => {
         <MainWrapper>
             <MainTitle>
                 What information can I find in my Vinlocator
-                <br />
                 vehicle history report?
             </MainTitle>
             <AdditionalTitle>
                 When running a VIN, license plate, or make and model search on <h1>Vinlocator</h1>, you can expect
-                <br />
                 to receive a comprehensive vehicle history report that covers nearly 15 different categories. Here
-                <br />
                 are some examples of the reports you might receive:
             </AdditionalTitle>
 
@@ -558,9 +664,6 @@ const ServiceDescription = () => {
                     <div className="fourth-row">
                         <div className="gap"></div>
                         <FirstGraphicBlockElement><IconWrapper>
-                            <CardTick style={{ width: '100%', height: '100%' }} />
-                        </IconWrapper>Listings</FirstGraphicBlockElement>
-                        <FirstGraphicBlockElement><IconWrapper>
                             <Car style={{ width: '100%', height: '100%' }} />
                         </IconWrapper>salvage</FirstGraphicBlockElement>
                         <FirstGraphicBlockElement><IconWrapper>
@@ -580,6 +683,70 @@ const ServiceDescription = () => {
                         </IconWrapper>model</FirstGraphicBlockElement>
                     </div>
                 </FirstGraphicBlock>
+                <FirstGraphicBlockMobile>
+                    <div className="first-row-mobile">
+                        <div className="gap"></div>
+                        <FirstGraphicBlockElement><IconWrapper>
+                            <UserSquare style={{ width: '100%', height: '100%' }} />
+                        </IconWrapper>Number of owners</FirstGraphicBlockElement>
+                        <FirstGraphicBlockElement><IconWrapper>
+                            <SmartCar style={{ width: '100%', height: '100%' }} /></IconWrapper>accidents
+                        </FirstGraphicBlockElement>
+                    </div>
+                    <div className="second-row-mobile">
+                        <div className="gap"></div>
+                        <FirstGraphicBlockElement><IconWrapper>
+                            <Gallery style={{ width: '100%', height: '100%' }} />
+                        </IconWrapper>Photos</FirstGraphicBlockElement>
+                        <FirstGraphicBlockElement><IconWrapper>
+                            <LockSlash style={{ width: '100%', height: '100%' }} />
+                        </IconWrapper>thefts</FirstGraphicBlockElement>
+                        <FirstGraphicBlockElement><IconWrapper>
+                            <SearchFavorite style={{ width: '100%', height: '100%' }} />
+                        </IconWrapper>model</FirstGraphicBlockElement>
+                    </div>
+                    <div className="third-row-mobile">
+                        <FirstGraphicBlockElement><IconWrapper>
+                            <Subtitle style={{ width: '100%', height: '100%' }} />
+                        </IconWrapper>specifications</FirstGraphicBlockElement>
+                        <FirstGraphicBlockElement><IconWrapper>
+                            <Danger style={{ width: '100%', height: '100%' }} />
+                        </IconWrapper>recalls</FirstGraphicBlockElement>
+                        <FirstGraphicBlockElement><IconWrapper>
+                            <CardTick style={{ width: '100%', height: '100%' }} />
+                        </IconWrapper>Listings</FirstGraphicBlockElement>
+                    </div>
+                    <div className="fourth-row-mobile">
+                        <div className="gap"></div>
+                        <FirstGraphicBlockElement><IconWrapper>
+                            <Car style={{ width: '100%', height: '100%' }} />
+                        </IconWrapper>salvage</FirstGraphicBlockElement>
+                        <FirstGraphicBlockElement><IconWrapper>
+                            <Danger style={{ width: '100%', height: '100%' }} />
+                        </IconWrapper>warranties</FirstGraphicBlockElement>
+                        <FirstGraphicBlockElement><IconWrapper>
+                            <ShieldCross style={{ width: '100%', height: '100%' }} />
+                        </IconWrapper>insurance</FirstGraphicBlockElement>
+                    </div>
+                    <div className="fifth-row-mobile">
+                        <div className="gap"></div>
+                        <FirstGraphicBlockElement><IconWrapper>
+                            <ShieldTick style={{ width: '100%', height: '100%' }} />
+                        </IconWrapper>Vehicle safety</FirstGraphicBlockElement>
+                        <FirstGraphicBlockElement><IconWrapper>
+                            <Rectangle511 style={{ width: '100%', height: '100%' }} />
+                        </IconWrapper>license plate</FirstGraphicBlockElement>
+                    </div>
+                    <div className="sixth-row-mobile">
+                        <div className="gap"></div>
+                        <FirstGraphicBlockElement><IconWrapper>
+                            <Shop style={{ width: '100%', height: '100%' }} />
+                        </IconWrapper>market value</FirstGraphicBlockElement>
+                        <FirstGraphicBlockElement><IconWrapper>
+                            <DollarSquare style={{ width: '100%', height: '100%' }} />
+                        </IconWrapper>ownership cost</FirstGraphicBlockElement>
+                    </div>
+                </FirstGraphicBlockMobile>
                 <InfoBlockWrapper>
                     <InfoBlockTitle>Detailed vehicle history</InfoBlockTitle>
                     <InfoBlock>At <span>Vinlocator</span>, our focus is on providing you with the most pertinent information
@@ -601,7 +768,6 @@ const ServiceDescription = () => {
                 </InfoBlockWrapper>
                 <SecondGraphicBlockElement />
             </SecondBlock>
-
             <ThirdBlock>
                 <ListingsLabel><IconWrapper>
                     <CardTick style={{ width: '100%', height: '100%' }} />
@@ -630,6 +796,13 @@ const ServiceDescription = () => {
                         your understanding of the vehicle's background and assist you in making an informed decision.</InfoBlock>
                 </SalesListingRightSideWrapper>
             </ThirdBlock>
+            <ThirdBlockMobileInfoWrapper>
+                <InfoBlockTitle>Sales listings</InfoBlockTitle>
+                <InfoBlock>By conducting a VIN lookup or license plate search with <span>Vinlocator</span>, you can gain access to a comprehensive
+                    sales history for the vehicle. This valuable information not only provides insight into the vehicle's value but also serves as
+                    confirmation of the number of previous owners as stated by the current seller. Understanding the complete sales history can enhance
+                    your understanding of the vehicle's background and assist you in making an informed decision.</InfoBlock>
+            </ThirdBlockMobileInfoWrapper>
 
             <FourthBlock>
                 <GradientBlock />

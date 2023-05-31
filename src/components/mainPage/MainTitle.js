@@ -5,7 +5,6 @@ padding-top: 70px;
 display: flex;
 align-items: center;
 justify-content: center;
-width: 100%;
 @media (max-width: 1439px) {
     padding-top: 60px;
 };
@@ -22,22 +21,27 @@ width: 100%;
 }
 `
 const TextBlock = styled.h1`
+display: block;
+width: 850px;
 font-weight: 600;
 font-size: 40px;
 text-align: center;
 letter-spacing: 0.02em;
 text-transform: capitalize;
 @media (max-width: 1439px) {
+    width: 710px;
     font-size: 34px;
 };
 @media (max-width: 1023px) {
     font-size: 30px;
 };
 @media (max-width: 767px) {
+     width: 420px;
      font-size: 20px;
 };
 @media (max-width: 424px) {
- 
+        width: 280px;
+      font-size: 18px;
 }
 `
 const MainTitle = () => {
@@ -45,9 +49,7 @@ const MainTitle = () => {
         <MainWrapper>
             <TextBlock>
                 Discover additional information about
-                <br />
                 a vehicle that you currently possess
-                <br />
                 or intend to buy:
             </TextBlock>
         </MainWrapper>

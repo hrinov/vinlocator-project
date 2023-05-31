@@ -25,12 +25,13 @@ background-size: cover;
     height: 1172px;
 };
 @media (max-width: 767px) {
-
+    height: 882px;
 };
 @media (max-width: 424px) {
-
+    height: 477px;
 }
 `
+
 const MainPage = () => {
     return (
         <>

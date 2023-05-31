@@ -19,7 +19,8 @@ width: 900px;
  width: 420px;
 };
 @media (max-width: 424px) {
- 
+  width: 316px;
+  height: 78px;
 }
 `
 const LogoBlock = styled.div`
@@ -54,11 +55,13 @@ cursor: pointer;
 };
 @media (max-width: 767px) {
     font-size: 12px;
-width: 80px;
-height: 35px;
+    width: 80px;
+    height: 35px;
 };
 @media (max-width: 424px) {
- 
+    width: 75px;
+    height: 33px;
+    font-weight: 500;
 }
 `
 const InfoBlock = styled.div`
@@ -80,7 +83,21 @@ margin-left: 10px;
 `
 const LogoIcon = styled.div`
 height: 125px;
-transform: translateX(-37px)
+transform: translateX(-37px);
+@media (max-width: 1439px) {
+
+};
+@media (max-width: 1023px) {
+
+};
+@media (max-width: 767px) {
+
+};
+@media (max-width: 424px) {
+ height: 90px;
+width: 135px;
+transform: translateX(-28px);
+}
 `
 const Header = ({ borderLine }) => {
     const navigate = useNavigate();

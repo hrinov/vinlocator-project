@@ -14,7 +14,7 @@ background-color: black;
 padding-top: 180px;
 };
 @media (max-width: 767px) {
-
+height: 825px;
 };
 @media (max-width: 424px) {
 
@@ -34,7 +34,7 @@ width: 900px;
 width: 706px;
 };
 @media (max-width: 767px) {
-
+width: 400px;
 };
 @media (max-width: 424px) {
 
@@ -75,10 +75,12 @@ cursor: pointer;
 
 };
 @media (max-width: 1023px) {
-font-size: 12px;
+    font-size: 12px;
 };
 @media (max-width: 767px) {
-
+    font-size: 12px;
+    width: 80px;
+    height: 35px;
 };
 @media (max-width: 424px) {
 
@@ -95,7 +97,7 @@ font-size: 13px;
 font-size: 12px;
 };
 @media (max-width: 767px) {
-
+display: none;
 };
 @media (max-width: 424px) {
 
@@ -138,6 +140,20 @@ align-items: center;
 color: white;
 font-size: 12px;
 font-weight: 500;
+@media (max-width: 1439px) {
+
+};
+@media (max-width: 1023px) {
+
+};
+@media (max-width: 767px) {
+    font-size: 10px;
+    margin-top: 60px;
+    flex-direction: column
+};
+@media (max-width: 424px) {
+
+}
 `
 const Rights = styled.div`
 font-weight: 400;
@@ -153,6 +169,18 @@ span {
     text-decoration: none;
     color: white !important;
     cursor: pointer;
+    @media (max-width: 1439px) {
+
+};
+@media (max-width: 1023px) {
+
+};
+@media (max-width: 767px) {
+margin-top: 25px
+};
+@media (max-width: 424px) {
+
+}
 }
 `
 const Footer = () => {

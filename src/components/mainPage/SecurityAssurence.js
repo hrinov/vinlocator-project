@@ -16,9 +16,14 @@ justify-content: space-between;
     height: 290px;
 };
 @media (max-width: 767px) {
+    text-align: center;
+    height: 500px;
+    width: 420px;
+    flex-direction: column;
+   align-items: center;
 };
 @media (max-width: 424px) {
-
+    margin-top: 80px;
 }
 `
 const ShieldIcon = styled.img`
@@ -53,10 +58,11 @@ margin-top: 80px;
 margin-top: 20px;
 };
 @media (max-width: 767px) {
-
+    width: 420px;
+margin: 40px auto 0 auto;
 };
 @media (max-width: 424px) {
-
+  width: 316px;
 }
 `
 const InfoBlockTitle = styled.div`
@@ -70,10 +76,10 @@ font-size: 20px;
 font-size: 17px;
 };
 @media (max-width: 767px) {
-
+width: 420px;
 };
 @media (max-width: 424px) {
-
+width: 316px;
 }
 `
 const InfoBlock = styled.div`
@@ -81,6 +87,18 @@ font-weight: 400;
 font-size: 14px;
 line-height: 20px;
 letter-spacing: 0.015em;
+@media (max-width: 1439px) {
+
+};
+@media (max-width: 1023px) {
+
+};
+@media (max-width: 767px) {
+width: 420px;
+};
+@media (max-width: 424px) {
+width: 316px;
+}
 `
 const SecurityAssurence = () => {
     return (
