@@ -11,7 +11,7 @@ display: flex;
 flex-direction: column;
 align-items: center;
 @media (max-width: 1439px) {
-    height: 360px;
+    height: 395px;
 };
 @media (max-width: 1023px) {
     height: 320px;
@@ -191,7 +191,7 @@ cursor: pointer;
     font-size: 15px;
     width: 76px;
     height: 35px;
-       font-weight: 500;
+    font-weight: 500;
 }
 `
 const AdditionalText = styled.div`

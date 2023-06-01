@@ -22,6 +22,20 @@ margin: 0 auto;
 height: 675px;
 width: 650px;
 overflow: hidden;
+@media (max-width: 1439px) {
+
+};
+@media (max-width: 1023px) {
+height: 650px;
+};
+@media (max-width: 767px) {
+    height: 630px;
+ width: 420px;
+};
+@media (max-width: 424px) {
+      height: 600px;
+ width: 320px;
+}
 `
 const Title = styled.div`
 text-align: center;
@@ -30,6 +44,19 @@ font-weight: 400;
 font-size: 20px;
 span{
     color: #FF0000;
+}
+@media (max-width: 1439px) {
+
+};
+@media (max-width: 1023px) {
+margin-top: 100px;
+};
+@media (max-width: 767px) {
+margin-top: 70px;
+};
+@media (max-width: 424px) {
+    margin-top: 40px;
+font-size: 18px;
 }
 `
 const CarBlock = styled.div`
@@ -87,6 +114,18 @@ transform: rotate(-2deg);
 `
 const ProgressBlock = styled.div`
 height: 100px;
+@media (max-width: 1439px) {
+
+};
+@media (max-width: 1023px) {
+height: 80px;
+};
+@media (max-width: 767px) {
+
+};
+@media (max-width: 424px) {
+
+}
 `
 const ProgressStatus = styled(ProgressBar)`
 margin: 0 auto;
@@ -101,6 +140,21 @@ width: 100%;
 font-weight: 400;
 font-size: 24px;
 line-height: 38px;
+@media (max-width: 1439px) {
+
+};
+@media (max-width: 1023px) {
+font-size: 22px;
+line-height: 30px;
+};
+@media (max-width: 767px) {
+font-size: 22px;
+line-height: 27px;
+};
+@media (max-width: 424px) {
+font-size: 18px;
+line-height: 24px;
+}
 `
 const Progress = ({ changeScene }) => {
     const [progress, setProgress] = useState(0);

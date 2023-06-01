@@ -13,13 +13,13 @@ position: absolute;
 width: 1440px;
 left: 50vw;
 transform: translateX(-50%);
-height: 1318px;
+height: 1322px;
 z-index: -10;
 background-image: url(${firstBlueLineralGr});
 background-size: cover;
 @media (max-width: 1439px) {
     width: 100%;
-    height: 1256px;
+    height: 1307px;
 };
 @media (max-width: 1023px) {
     height: 1172px;
@@ -31,7 +31,6 @@ background-size: cover;
     height: 477px;
 }
 `
-
 const MainPage = () => {
     return (
         <>
@@ -43,7 +42,7 @@ const MainPage = () => {
             <SecurityAssurence />
             <Reviews />
             <SecondSearchBlock />
-            <Footer />
+            <Footer withoutInput={false} />
         </>
     )
 }

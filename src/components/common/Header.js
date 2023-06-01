@@ -16,10 +16,10 @@ width: 900px;
   width: 706px;
 };
 @media (max-width: 767px) {
- width: 420px;
+ width: 422px;
 };
 @media (max-width: 424px) {
-  width: 316px;
+  width: 320px;
   height: 78px;
 }
 `
@@ -60,7 +60,7 @@ cursor: pointer;
 };
 @media (max-width: 424px) {
     width: 75px;
-    height: 33px;
+    height: 34px;
     font-weight: 500;
 }
 `
@@ -84,6 +84,7 @@ margin-left: 10px;
 const LogoIcon = styled.div`
 height: 125px;
 transform: translateX(-37px);
+cursor: pointer;
 @media (max-width: 1439px) {
 
 };

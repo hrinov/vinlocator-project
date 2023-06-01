@@ -37,7 +37,7 @@ background-size: contain;
 };
 @media (max-width: 767px) {
     top: -203px;
-    height: 645px;
+    height: 400px;
 };
 @media (max-width: 424px) {
     top: -98px;
@@ -60,7 +60,7 @@ align-items: center;
     width: 420px; 
 };
 @media (max-width: 424px) {
-    width: 316px;
+    width: 320px;
 }
 `
 const MainTitle = styled.h2`
@@ -85,7 +85,7 @@ width: 756px;
 }
 `
 const AdditionalTitle = styled.div`
-margin-top: 5px;
+margin-top: 10px;
 text-align: center;
 font-weight: 400;
 font-size: 18px;
@@ -98,6 +98,7 @@ width: 933px;
     font-weight: 700;  
 }
 @media (max-width: 1439px) {
+    width: 810px;
         line-height: 22px;
 font-size: 16px;
    h1{
@@ -131,7 +132,7 @@ justify-content: space-between;
 @media (max-width: 767px) {
     margin-top: 45px;
     flex-direction: column;
-    height: 460px;
+    height: 475px;
 };
 @media (max-width: 424px) {
   height: 530px;
@@ -155,7 +156,7 @@ span{
     text-align: center;
 };
 @media (max-width: 424px) {
-   width: 316px; 
+   width:320px; 
 }
 `
 const InfoBlockTitle = styled.div`
@@ -365,7 +366,7 @@ height: 480px;
 
 };
 @media (max-width: 424px) {
- width: 316px;
+ width: 320px;
 }
 `
 const ThirdBlock = styled.div`
@@ -392,7 +393,7 @@ border-radius: 30px;
    width: 900px; 
 };
 @media (max-width: 1023px) {
-    margin-top: 25px;
+    margin-top: 55px;
     height: 265px;
     padding-left: 22px;
     padding-right: 20px;
@@ -406,7 +407,7 @@ border-radius: 30px;
 @media (max-width: 424px) {
     padding-left: 18px;
     padding-right: 20px;
-    width: 316px;
+    width: 320px;
     height: 216px;
 }
 `
@@ -546,7 +547,7 @@ display: flex;
 };
 @media (max-width: 424px) {
     margin-top: 85px;
-width: 316px; 
+width: 320px; 
 }
 `
 const FourthBlock = styled.div`
@@ -573,8 +574,8 @@ justify-content: space-between;
     flex-direction: column-reverse;
 };
 @media (max-width: 424px) {
-    width: 316px;
-     height: 717px;
+    width: 320px;
+     height: 702px;
 }
 `
 const FourthGraphicBlockElement = styled(Second3dCar)`
@@ -663,6 +664,9 @@ const ServiceDescription = () => {
                     </div>
                     <div className="fourth-row">
                         <div className="gap"></div>
+                        <FirstGraphicBlockElement><IconWrapper>
+                            <CardTick style={{ width: '100%', height: '100%' }} />
+                        </IconWrapper>Listings</FirstGraphicBlockElement>
                         <FirstGraphicBlockElement><IconWrapper>
                             <Car style={{ width: '100%', height: '100%' }} />
                         </IconWrapper>salvage</FirstGraphicBlockElement>

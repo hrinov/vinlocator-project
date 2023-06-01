@@ -4,12 +4,40 @@ padding-top: 35px;
 padding-bottom: 120px;
 margin: 0 auto;
 width: 1112px;
+@media (max-width: 1439px) {
+    padding-bottom: 100px;
+width: 900px;
+};
+@media (max-width: 1023px) {
+        padding-bottom: 90px;
+  width: 706px;
+};
+@media (max-width: 767px) {
+            padding-bottom: 70px;
+ width: 420px;
+};
+@media (max-width: 424px) {
+        padding-bottom: 20px;
+  width: 320px;
+}
 `
 const Title = styled.div`
 font-weight: 600;
 font-size: 40px;
 text-transform: capitalize;
 margin-bottom: 15px;
+@media (max-width: 1439px) {
+font-size: 35px;
+};
+@media (max-width: 1023px) {
+font-size: 30px;
+};
+@media (max-width: 767px) {
+ 
+};
+@media (max-width: 424px) {
+font-size: 24px;
+}
 `
 const Text = styled.div`
 font-weight: 400;
@@ -19,6 +47,26 @@ letter-spacing: 0.02em;
 span{
 font-weight: 700;
 font-size: 16px;
+}
+@media (max-width: 1439px) {
+font-size: 15px;
+};
+@media (max-width: 1023px) {
+
+};
+@media (max-width: 767px) {
+ font-size: 14px;
+ span{
+font-weight: 600;
+font-size: 15px;
+ }
+ };
+@media (max-width: 424px) {
+ font-size: 12px;
+ span{
+font-weight: 600;
+font-size: 13px;
+ }
 }
 `
 const MainText = () => {

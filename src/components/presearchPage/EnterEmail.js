@@ -1,12 +1,216 @@
 import styled from "styled-components";
+import { useRef } from "react";
+import { ReactComponent as MagnifyingGlass } from '../../icons/magnifying-glass.svg';
+import { useEffect, useState } from "react";
+import { useForm } from "react-hook-form";
+import { ReactComponent as Letters } from '../../images/letters.svg';
 import { ReactComponent as ArrowLeft } from '../../icons/arrow-left.svg';
 import { ReactComponent as ArrowRight } from '../../icons/arrow-right.svg';
 import { ReactComponent as Union } from '../../icons/union.svg';
-import { useEffect, useRef, useState } from "react";
+import secondBlueLineralGr from '../../images/second-blue-lineral-gr.svg'
+const GradientBlock = styled.div`
+position: absolute;
+width: 1440px;
+left: 50vw;
+transform: translateX(-50%);
+height: 700px;
+z-index: -10;
+background-image: url(${secondBlueLineralGr});
+background-size: contain;
+background-repeat: no-repeat;
+@media (max-width: 1439px) {
+    width: 100%;
+height: 672px;
+};
+@media (max-width: 1023px) {
+height: 491px;
+};
+@media (max-width: 767px) {
+  height: 354px;
+};
+@media (max-width: 424px) {
+   height: 200px;
+}
+`
 const MainWrapper = styled.section`
+box-sizing: border-box;
+position: relative;
+padding-top: 80px;
+    height: 675px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    @media (max-width: 1439px) {
+
+};
+@media (max-width: 1023px) {
+    padding-top: 40px;
+height: 650px;
+};
+@media (max-width: 767px) {
+    height: 430px;
+};
+@media (max-width: 424px) {
+      height: 409px;
+}
+`
+const LettersImg = styled(Letters)`
+width: 483px;
+height: 172px;
+@media (max-width: 1439px) {
+
+};
+@media (max-width: 1023px) {
+
+};
+@media (max-width: 767px) {
+width: 340px;
+};
+@media (max-width: 424px) {
+    width: 300px;
+}
+`
+const InputWrapper = styled.section`
+margin: 0 auto;
+height: 395px;
+width: 536px;
+display: flex;
+flex-direction: column;
+align-items: center;
+@media (max-width: 1439px) {
+    height: 395px;
+};
+@media (max-width: 1023px) {
+    height: 320px;
+};
+@media (max-width: 767px) {
+    height: 250px;
+    width: 380px;
+};
+@media (max-width: 424px) {
+    height: 220px;
+    width: 310px;
+}
+`
+const Input = styled.input`
+margin: 0 auto;
+box-sizing: border-box;
+width: 100%;
+height: 60px;
+border-radius: 40px;
+padding-left: 60px;
+padding-right: 140px;
+border: 1px solid rgba(0, 0, 0, 0.5);
+box-shadow: 0px 0px 4px 6px rgba(0, 0, 0, 0.04), inset 0px 4px 4px rgba(0, 0, 0, 0.2);
+:focus{
+    outline: 4px solid #b4f5ff
+}
+    ::placeholder{
+    font-family: 'Roboto';
+    font-weight: 200;
+    font-size: 20px;
+    color: #3A3A3A;
+}
+@media (max-width: 1439px) {
+
+};
+@media (max-width: 1023px) {
+
+};
+@media (max-width: 767px) {
+ height: 55px;
+  ::placeholder{
+    font-size: 16px;
+}
+};
+@media (max-width: 424px) {
+ height: 52px;
+padding-left: 40px;
+ padding-right: 90px;
+  ::placeholder{
+    font-size: 15px;
+}
+}
+`
+const MagnifyingGlassIcon = styled(MagnifyingGlass)`
+top: 18px;
+left: 17px;
+position: absolute;
+width: 24px;
+height: 24px;
+@media (max-width: 1439px) {
+
+};
+@media (max-width: 1023px) {
+
+};
+@media (max-width: 767px) {
+
+};
+@media (max-width: 424px) {
+    top: 16px;
+    left: 14px;
+    width: 20px;
+    height: 20px;
+}
+`
+const Button = styled.button`
+top: 9px;
+right: 9px;
+position: absolute;
+width: 124px;
+height: 44px;
+background-color: #3AD0E6;
+border: 1px solid rgba(0, 0, 0, 0.5);;
+font-weight: 700;
+font-size: 18px;
+border-radius: 40px;
+margin-left: 10px;
+cursor: pointer;
+:hover{
+   background-color: #50dff5; 
+}
+@media (max-width: 1439px) {
+
+};
+@media (max-width: 1023px) {
+
+};
+@media (max-width: 767px) {
+    font-weight: 600;
+    font-size: 18px;
+    width: 96px;
+    height: 39px;
+};
+@media (max-width: 424px) {
+    font-size: 15px;
+    width: 76px;
+    height: 35px;
+    font-weight: 500;
+}
+`
+const AdditionalText = styled.div`
+margin-bottom: 11px;
+font-weight: 400;
+font-size: 14px;
+text-align: center;
+@media (max-width: 1439px) {
+
+};
+@media (max-width: 1023px) {
+
+};
+@media (max-width: 767px) {
+
+};
+@media (max-width: 424px) {
+font-size: 13px;
+}
+`
+const ReviewsMainWrapper = styled.section`
 position: relative;
 margin: 0 auto;
-margin-top: 160px;
 width: 1184px;
 overflow: hidden;
 @media (max-width: 1439px) {
@@ -20,7 +224,7 @@ width: 900px;
 };
 @media (max-width: 424px) {
        width: 320px;
-margin-top: 210px;
+margin-top: 0px;
 }
 `
 const ArrowLeftIcon = styled(ArrowLeft)`
@@ -172,7 +376,8 @@ width: 89px;
 height: 16px;
 display: flex;
 justify-content: space-between;
-margin-bottom: 5px;
+margin-bottom: 180px;
+
 @media (max-width: 1439px) {
 
 };
@@ -180,9 +385,10 @@ margin-bottom: 5px;
 
 };
 @media (max-width: 767px) {
-
+margin-bottom: 150px;
 };
 @media (max-width: 424px) {
+    margin-bottom: 120px;
 width: 70px;
 }
 `
@@ -297,7 +503,7 @@ const Reviews = () => {
 
     }, [currentReview])
     return (
-        <MainWrapper>
+        <ReviewsMainWrapper>
             <ArrowLeftIcon onClick={() => { if (!btnDisabled) { handleClick('left') } }} />
             <ArrowRightIcon onClick={() => { if (!btnDisabled) { handleClick('right') } }} />
 
@@ -310,7 +516,61 @@ const Reviews = () => {
                 <NavElement style={currentReview === 1 ? { backgroundColor: '#D5DBE1' } : null} />
                 <NavElement style={currentReview === 2 ? { backgroundColor: '#D5DBE1' } : null} />
             </Nav>
-        </MainWrapper>
+        </ReviewsMainWrapper>
     )
 }
-export default Reviews;
+const EnterEmail = () => {
+    const [validation, setValidation] = useState(false);
+    const {
+        register,
+        handleSubmit,
+        formState: { errors },
+        setValue,
+        watch,
+    } = useForm();
+    const userData = watch("userData") ? watch("userData") : "";
+    const onSubmit = (data) => {
+        console.log(data.userData);
+    };
+    useEffect(() => {
+        if (validation) {
+            setValidation(false)
+        }
+    }, [userData])
+    return (
+        <>
+            <GradientBlock />
+            <MainWrapper>
+                <LettersImg />
+                <AdditionalText>
+                    Enter your email please. We will email your results
+                </AdditionalText>
+                <InputWrapper>
+                    <form style={{ width: '100%', position: "relative" }}
+                        onSubmit={handleSubmit(onSubmit)}
+                    >
+                        <MagnifyingGlassIcon />
+                        <Button onClick={() => { setValidation(true) }}>
+                            Submit
+                        </Button>
+                        <Input
+                            value={userData}
+                            {...register("userData", {
+                                required: true
+                            })}
+                            onChange={(event) => {
+                                setValue("userData", event.target.value, { shouldValidate: true });
+                            }}
+                            placeholder="Enter your E-mail"
+                            style={
+                                validation && errors.userData ?
+                                    { outline: "4px solid rgba(255, 206, 227, 0.7)" } : null}
+                        />
+                    </form>
+                </InputWrapper>
+            </MainWrapper>
+            <Reviews />
+        </>
+    )
+}
+export default EnterEmail;

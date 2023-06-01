@@ -3,14 +3,15 @@ import Header from "../components/common/Header";
 import Footer from "../components/common/Footer";
 import Progress from "../components/presearchPage/Progress";
 import SelectType from "../components/presearchPage/SelectType";
+import EnterEmail from "../components/presearchPage/EnterEmail";
 import { useState } from "react";
 const PresearchPage = () => {
     const [disappear, setDisappear] = useState(false);
     const [scene, setScene] = useState('progress');
-    const changeScene = () => {
+    const changeScene = (selectedOptions) => {
         setDisappear(true);
         setTimeout(() => {
-            setScene('SelectType')
+            if (selectedOptions) { setScene('enterEmail') } else { setScene('selectType') }
             setDisappear(false);
         }, 900)
     }
@@ -37,12 +38,14 @@ const PresearchPage = () => {
 
                         {scene === 'progress' ?
                             <Progress changeScene={changeScene} /> :
-                            <SelectType />}
+                            scene === 'selectType' ?
+                                <SelectType changeScene={changeScene} /> :
+                                <EnterEmail />}
                     </div>
                 )
                 }
             </Transition>
-            <Footer />
+            <Footer withoutInput={true} />
         </>
 
     )

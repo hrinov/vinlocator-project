@@ -4,19 +4,20 @@ import { useNavigate } from "react-router-dom";
 const MainWrapper = styled.div`
 box-sizing: border-box;
 position: relative;
-height: 740px;
 padding-top: 220px;
 background-color: black;
+padding-bottom: 40px;
 @media (max-width: 1439px) {
+    padding-top: 200px;
 
 };
 @media (max-width: 1023px) {
-padding-top: 180px;
+    padding-top: 180px;
 };
 @media (max-width: 767px) {
-height: 825px;
 };
 @media (max-width: 424px) {
+    padding-top: 165px;
 
 }
 `
@@ -37,7 +38,7 @@ width: 706px;
 width: 400px;
 };
 @media (max-width: 424px) {
-
+width:320px;
 }
 `
 const LogoButtonsWrapper = styled.div`
@@ -83,7 +84,9 @@ cursor: pointer;
     height: 35px;
 };
 @media (max-width: 424px) {
-
+    width: 75px;
+    height: 34px;
+    font-weight: 500;
 }
 `
 const InfoBlock = styled.div`
@@ -105,6 +108,20 @@ display: none;
 `
 const LogoIcon = styled.div`
 height: 125px;
+width: 155px;
+@media (max-width: 1439px) {
+
+};
+@media (max-width: 1023px) {
+
+};
+@media (max-width: 767px) {
+
+};
+@media (max-width: 424px) {
+ height: 90px;
+width: 135px;
+}
 `
 const DescriptionBlock = styled.div`
 margin-top:30px;
@@ -127,7 +144,7 @@ font-size: 12px;
 
 };
 @media (max-width: 424px) {
-
+margin-top:25px;
 }
 `
 const EndBlock = styled.div`
@@ -144,25 +161,28 @@ font-weight: 500;
 
 };
 @media (max-width: 1023px) {
-
-};
-@media (max-width: 767px) {
-    font-size: 10px;
-    margin-top: 60px;
+        margin-top: 50px;
     flex-direction: column
 };
+@media (max-width: 767px) {
+          margin-top: 60px;
+    font-size: 10px;
+};
 @media (max-width: 424px) {
-
+font-size: 11px;
+  margin-top: 40px;
 }
 `
 const Rights = styled.div`
 font-weight: 400;
 `
 const LinksWrapper = styled.div`
-width: 200px;
+width: 230px;
 display: flex;
 justify-content: space-between;
+font-size: 14px;
 span {
+    text-align: end;
     text-decoration-color: none;
     display: block;
     font-weight: 500; 
@@ -170,31 +190,35 @@ span {
     color: white !important;
     cursor: pointer;
     @media (max-width: 1439px) {
-
+        width: 208px;
+font-size: 13px;
 };
 @media (max-width: 1023px) {
-
+margin-top: 30px;
+    text-align: center;
+text-decoration: underline;
+text-underline-offset: 4px;
 };
 @media (max-width: 767px) {
-margin-top: 25px
+
 };
 @media (max-width: 424px) {
 
 }
 }
 `
-const Footer = () => {
+const Footer = ({ withoutInput }) => {
     const navigate = useNavigate();
     const handleClick = (link) => {
         navigate(link);
     }
     return (
-        <MainWrapper>
+        <MainWrapper style={withoutInput ? { paddingTop: '20px' } : null}>
             <DataWrapper>
                 <LogoButtonsWrapper>
                     <LogoBlock>
                         <LogoIcon>
-                            <Logo style={{ height: '100%' }} />
+                            <Logo style={{ height: '100%', width: '100%' }} />
                         </LogoIcon>
                     </LogoBlock>
                     <ButtonsBlock>

@@ -10,6 +10,23 @@ grid-template-columns: 1fr 1fr 1fr;
 background-color: rgba(0, 0, 0, 0.5);
 column-gap: 1px;
 border: 1px solid rgba(0, 0, 0, 0.5);
+@media (max-width: 1439px) {
+width: 900px;
+};
+@media (max-width: 1023px) {
+    height: 60px;
+  width: 706px;
+};
+@media (max-width: 767px) {
+    grid-template-columns: 0.9fr 0.85fr 1.25fr;
+        height: 53px;
+ width: 420px;
+};
+@media (max-width: 424px) {
+    grid-template-columns: 0.9fr 0.84fr 1.26fr;
+  width: 320px;
+  height: 55px;
+}
 `
 const NavElement = styled.div`
 display: flex;
@@ -19,6 +36,21 @@ background-color: #D5DBE1;
 font-weight: 700;
 font-size: 18px;
 cursor: pointer;
+@media (max-width: 1439px) {
+    font-weight: 600;
+font-size: 17px;
+};
+@media (max-width: 1023px) {
+  font-weight: 600;
+font-size: 16px;
+};
+@media (max-width: 767px) {
+  font-weight: 500;
+font-size: 14px;
+};
+@media (max-width: 424px) {
+font-size: 12px;
+}
 `
 const PrivacyTermsQuestionsNavbar = ({ activePage }) => {
     const navigate = useNavigate();

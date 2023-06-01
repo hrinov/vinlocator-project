@@ -17,6 +17,7 @@ border-radius: 6px;
 transform: translateY(137px);
 z-index: 10;
 @media (max-width: 1439px) {
+    height: 280px;
 width: 900px;
 };
 @media (max-width: 1023px) {
@@ -25,10 +26,11 @@ width: 900px;
 };
 @media (max-width: 767px) {
         height: 220px;
-width: 410px;
+width: 100vw;
 };
 @media (max-width: 424px) {
-
+    height: 220px;
+    width: 100vw;
 }
 `
 const SearchType = styled.div`
@@ -45,7 +47,7 @@ font-size: 20px;
  
 };
 @media (max-width: 1023px) {
-
+margin: 20px auto 20px auto;
 };
 @media (max-width: 767px) {
     width: 380px;
@@ -54,7 +56,12 @@ font-size: 20px;
    padding-top: 5px; 
 };
 @media (max-width: 424px) {
-
+        width: 310px;
+    padding-top: 0px;
+    margin: 0px auto 12px auto;
+    font-size: 13px;
+    padding-left: 35px;
+    padding-right: 35px;
 }
 `
 const VinBlock = styled.div`
@@ -74,7 +81,7 @@ border-bottom: 2px solid ${props => (props.bottomLine)};
 width: 126px;
 };
 @media (max-width: 424px) {
-
+width: 107px;
 }
 `
 const LicenseBlock = styled.div`
@@ -94,7 +101,7 @@ border-bottom: 2px solid ${props => (props.bottomLine)};
 width: 126px;
 };
 @media (max-width: 424px) {
-
+width: 107px;
 }
 `
 const Form = styled.form`
@@ -110,7 +117,7 @@ width: 536px;
     width: 380px;
 };
 @media (max-width: 424px) {
-
+    width: 310px;
 }
 `
 const Input = styled.input`
@@ -147,7 +154,13 @@ box-shadow: 0px 0px 0px 6px rgba(0, 0, 0, 0.04), inset 0px 4px 4px rgba(0, 0, 0,
 }
 };
 @media (max-width: 424px) {
-
+    width: 310px;
+    height: 52px;
+    padding-left: 40px;
+    padding-right: 90px;
+  ::placeholder{
+    font-size: 15px;
+}
 }
 `
 const MagnifyingGlassIcon = styled(MagnifyingGlass)`
@@ -156,6 +169,21 @@ left: 17px;
 position: absolute;
 width: 24px;
 height: 24px;
+@media (max-width: 1439px) {
+
+};
+@media (max-width: 1023px) {
+
+};
+@media (max-width: 767px) {
+
+};
+@media (max-width: 424px) {
+    top: 16px;
+    left: 14px;
+    width: 20px;
+    height: 20px;
+}
 `
 const Button = styled.button`
 top: 9px;
@@ -186,7 +214,10 @@ width: 96px;
 height: 39px;
 };
 @media (max-width: 424px) {
-
+    font-size: 15px;
+    width: 76px;
+    height: 35px;
+    font-weight: 500;
 }
 `
 const AdditionalText = styled.div`
