@@ -132,6 +132,18 @@ margin: 0 auto;
 width: 388px;
 height: 6px !important;
 background-color: rgba(0, 0, 0, 0.75);
+@media (max-width: 1439px) {
+
+};
+@media (max-width: 1023px) {
+
+};
+@media (max-width: 767px) {
+
+};
+@media (max-width: 424px) {
+width: 320px;
+}
 `
 const DescriptionBlock = styled.div`
 margin: 10px auto 165px auto;
