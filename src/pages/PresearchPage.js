@@ -41,11 +41,11 @@ const PresearchPage = () => {
                             scene === 'selectType' ?
                                 <SelectType changeScene={changeScene} /> :
                                 <EnterEmail />}
+                        <Footer withoutInput={true} />
                     </div>
                 )
                 }
             </Transition>
-            <Footer withoutInput={true} />
         </>
 
     )
