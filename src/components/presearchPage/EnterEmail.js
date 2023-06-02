@@ -8,6 +8,7 @@ import { ReactComponent as ArrowLeft } from '../../icons/arrow-left.svg';
 import { ReactComponent as ArrowRight } from '../../icons/arrow-right.svg';
 import { ReactComponent as Union } from '../../icons/union.svg';
 import secondBlueLineralGr from '../../images/second-blue-lineral-gr.svg'
+import { useNavigate } from "react-router-dom";
 const GradientBlock = styled.div`
 position: absolute;
 width: 1440px;
@@ -520,6 +521,7 @@ const Reviews = () => {
     )
 }
 const EnterEmail = () => {
+    const navigate = useNavigate();
     const [validation, setValidation] = useState(false);
     const {
         register,
@@ -531,6 +533,7 @@ const EnterEmail = () => {
     const userData = watch("userData") ? watch("userData") : "";
     const onSubmit = (data) => {
         console.log(data.userData);
+        setTimeout(() => { navigate('/search') }, 400)
     };
     useEffect(() => {
         if (validation) {

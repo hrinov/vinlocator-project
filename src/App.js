@@ -5,6 +5,8 @@ import PrivacyPolicyPage from "./pages/PrivacyPolicyPage";
 import TermsOfUsePage from "./pages/TermsOfUsePage";
 import CommonQuestionsPage from "./pages/CommonQuestionsPage";
 import PresearchPage from "./pages/PresearchPage";
+import SearchPage from "./pages/SerchPage";
+import PaymentPage from "./pages/PaymentPage";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 const GlobalStyle = createGlobalStyle`
 body {
@@ -36,6 +38,14 @@ function App() {
           <Route
             path={'/pre-search'}
             element={<PresearchPage />}
+          />
+          <Route
+            path={'/search'}
+            element={<SearchPage />}
+          />
+          <Route
+            path={'/payment'}
+            element={<PaymentPage />}
           />
         </Routes>
       </BrowserRouter>

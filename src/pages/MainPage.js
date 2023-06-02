@@ -17,6 +17,7 @@ height: 1322px;
 z-index: -10;
 background-image: url(${firstBlueLineralGr});
 background-size: cover;
+background-repeat: no-repeat;
 @media (max-width: 1439px) {
     width: 100%;
     height: 1307px;
