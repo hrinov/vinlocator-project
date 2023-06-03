@@ -1,6 +1,6 @@
 import styled from "styled-components";
 import { ReactComponent as CardTick } from '../../icons/card-tick.svg';
-import { ReactComponent as Slide1 } from '../../images/fourth-3d-car.svg';
+import { ReactComponent as Slide1 } from '../../images/first-3d-car.svg';
 import { ReactComponent as Slide1Mobile } from '../../images/first-3d-car.svg';
 import { ReactComponent as Slide3 } from '../../images/second-3d-car.svg';
 import slide4 from '../../images/shield.png';
@@ -10,6 +10,9 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import { createGlobalStyle } from "styled-components";
 import { useEffect, useRef, useState } from "react";
 import { useNavigate } from "react-router-dom";
+import './slide1Animation.css'
+import './slide3Animation.css'
+import './slide5Animation.css'
 const GlobalStyle = createGlobalStyle`
 .progress-block .progress-bar {
 background-color: #3AD0E6;
@@ -78,7 +81,7 @@ const Slide1MobileImg = styled(Slide1Mobile)`
 `
 const Slide3Img = styled(Slide3)`
 transform: translateY(5%);
-width: 270px;
+width: 360px;
 `
 const Slide4Img = styled.img`
 height: 275px;
@@ -388,11 +391,17 @@ const Progress = () => {
         }
     );
     const [canFinish, setCanFinish] = useState(true);
-    const [slideElement, setSlideElement] = useState()
+    const [slideElement, setSlideElement] = useState();
     const slidesBlock = useRef();
     const descriptionBlock = useRef();
     const animatedBlocks = [slidesBlock, descriptionBlock];
-    const slides = [Slide1Img, Slide2, Slide3Img, Slide4, Slide5Img, Slide1MobileImg];
+    const Slide1Ref = useRef();
+    const Slide3Ref = useRef();
+    const Slide5Ref = useRef();
+    const AnimatedSlide1 = <div className="firstAnimation"><Slide1Img ref={Slide1Ref} /></div>;
+    const AnimatedSlide3 = <div className="thirdAnimation"><Slide3Img ref={Slide3Ref} /></div>;
+    const AnimatedSlide5 = <div className="fifthAnimation"><Slide5Img ref={Slide5Ref} /></div>;
+    const slides = [AnimatedSlide1, Slide2, AnimatedSlide3, Slide4, AnimatedSlide5];
     const startAnimation = (type) => {
         animatedBlocks.forEach((block) => {
             if (!type || type === 'center') {
@@ -413,7 +422,7 @@ const Progress = () => {
                         { opacity: "1" }
                     ],
                     {
-                        duration: !type ? 3420 : 1800,
+                        duration: !type ? 7200 : 4000,
                         iterations: 1,
                     }
                 );
@@ -428,7 +437,7 @@ const Progress = () => {
                     { opacity: "0" }
                 ],
                     {
-                        duration: 1530,
+                        duration: 2000,
                         iterations: 1,
                     }
                 );
@@ -442,8 +451,8 @@ const Progress = () => {
         let SlideElement;
         switch (progress) {
             case 0:
-                SlideElement = window.innerWidth <= 767 ? slides[5] : slides[0];
-                setSlideElement(<SlideElement />);
+                SlideElement = slides[0];
+                setSlideElement(SlideElement);
                 setDescriptionData({
                     title: <div>Accident history</div>,
                     description: <div>In the event that your vehicle has been involved in an accident requiring intervention
@@ -453,6 +462,9 @@ const Progress = () => {
                         often as needed to ensure you are up to date with the latest information.</div>
                 })
                 startAnimation();
+                break;
+            case 3:
+                Slide1Ref.current.classList.add('active')
                 break;
             case 20:
                 SlideElement = slides[1];
@@ -469,7 +481,7 @@ const Progress = () => {
                 break;
             case 40:
                 SlideElement = slides[2];
-                setSlideElement(<SlideElement />);
+                setSlideElement(SlideElement);
                 setDescriptionData({
                     title: <div>Specifications and equipment</div>,
                     description: <div>If you're unsure whether the car you're interested in has a sunroof or blind spot detection as standard
@@ -480,6 +492,9 @@ const Progress = () => {
                         decision when considering your vehicle options.</div>
                 })
                 startAnimation();
+                break;
+            case 43:
+                Slide3Ref.current.classList.add('active')
                 break;
             case 60:
                 SlideElement = slides[3];
@@ -495,12 +510,15 @@ const Progress = () => {
                 break;
             case 80:
                 SlideElement = slides[4];
-                setSlideElement(<SlideElement />);
+                setSlideElement(SlideElement);
                 setDescriptionData({
                     title: <div>Market Value</div>,
                     description: <div>Bumper analyzes past sales of similar vehicles to provide below, average and above market estimates for vehicles.</div>
                 })
                 startAnimation('center');
+                break;
+            case 83:
+                Slide5Ref.current.classList.add('active')
                 break;
             case 90:
                 startAnimation('away');
@@ -512,10 +530,10 @@ const Progress = () => {
                 break;
         }
         if (progress <= 88 || canFinish) {
-            setTimeout(() => { setProgress(progress + 1) }, 200)
+            // if (progress <= 10) {
+            setTimeout(() => { setProgress(progress + 1) }, 350)
         }
     }, [progress]);
-    const S2 = slides[1]
     return (
         <>
             <GlobalStyle />
