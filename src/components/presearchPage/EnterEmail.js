@@ -221,11 +221,10 @@ width: 900px;
    width: 706px;
 };
 @media (max-width: 767px) {
-   width: 420px;
+   width: 100vw;
 };
 @media (max-width: 424px) {
-       width: 320px;
-margin-top: 0px;
+
 }
 `
 const ArrowLeftIcon = styled(ArrowLeft)`
@@ -249,6 +248,7 @@ border-radius: 100%;
 height: 45px;
 width: 45px;
 top: 136px;
+left: 7px;
 };
 @media (max-width: 424px) {
 top: 101px;
@@ -276,6 +276,7 @@ border-radius: 100%;
 height: 45px;
 width: 45px;
 top: 136px;
+right: 7px;
 };
 @media (max-width: 424px) {
 top: 101px;
@@ -306,11 +307,11 @@ padding-bottom: 10px;
 };
 @media (max-width: 767px) {
     min-height: 330px;
-    width: 420px;
+    width: 100vw;
 };
 @media (max-width: 424px) {
         min-height: 283px;
-    width: 320px;
+
 }
 `
 const ReviewHolder = styled.div`
@@ -520,7 +521,7 @@ const Reviews = () => {
         </ReviewsMainWrapper>
     )
 }
-const EnterEmail = () => {
+const EnterEmail = ({ setDisappear }) => {
     const navigate = useNavigate();
     const [validation, setValidation] = useState(false);
     const {
@@ -533,7 +534,8 @@ const EnterEmail = () => {
     const userData = watch("userData") ? watch("userData") : "";
     const onSubmit = (data) => {
         console.log(data.userData);
-        setTimeout(() => { navigate('/search') }, 400)
+        setDisappear(true)
+        setTimeout(() => { navigate('/search') }, 600)
     };
     useEffect(() => {
         if (validation) {

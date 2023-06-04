@@ -30,11 +30,11 @@ height: 650px;
 };
 @media (max-width: 767px) {
     height: 630px;
- width: 420px;
+width: 100vw
 };
 @media (max-width: 424px) {
       height: 600px;
- width: 320px;
+
 }
 `
 const Title = styled.div`
@@ -52,9 +52,12 @@ span{
 margin-top: 100px;
 };
 @media (max-width: 767px) {
+        margin: 0 auto;
 margin-top: 70px;
+width: 420px;
 };
 @media (max-width: 424px) {
+    width: 320px;
     margin-top: 40px;
 font-size: 18px;
 }
@@ -65,7 +68,13 @@ width: 100%;
 display: flex;
 justify-content: center;
 align-items: center;
-transform: translateX(-100%)
+transform: translateX(-100%);
+@media (max-width: 767px) {
+width: 100vw
+};
+@media (max-width: 424px) {
+
+}
 `
 const Car1Img = styled(Car1)`
 width: 180px;
@@ -160,12 +169,15 @@ font-size: 22px;
 line-height: 30px;
 };
 @media (max-width: 767px) {
+    margin: 0 auto;
 font-size: 22px;
 line-height: 27px;
+width: 420px
 };
 @media (max-width: 424px) {
 font-size: 18px;
 line-height: 24px;
+width: 320px;
 }
 `
 const Progress = ({ changeScene }) => {
@@ -174,6 +186,16 @@ const Progress = ({ changeScene }) => {
     const [carElement, setCarElement] = useState()
     const carBlock = useRef();
     const cars = [Car1Img, Car2Img, Car3Img, Car4Img, Car5Img, Car6Img, Car7Img, Car8Img, Car9Img];
+    const defaultStyle = {
+        opacity: 0,
+        transition: `opacity 500ms ease-in-out`,
+    }
+    const transitionStyles = {
+        entering: { opacity: 1 },
+        entered: { opacity: 1 },
+        exiting: { opacity: 0 },
+        exited: { opacity: 0 },
+    };
     const startAnimation = (type) => {
         if (!type || type === 'center') {
             const animation = carBlock.current.animate(

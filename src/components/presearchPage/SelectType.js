@@ -205,7 +205,7 @@ font-size: 11px;
 text-transform: uppercase;
 cursor: pointer;
 :hover{
-    background: #3AD0E6;
+    background: #50dff5;
 }
     @media (max-width: 1439px) {
 padding-left: 16px;
@@ -269,6 +269,7 @@ font-size: 13px;
 font-weight: 600;
 border-radius: 40px;
 margin-left: 10px;
+transition-duration: 300ms;
 cursor: pointer;
 :hover{
     background-color: #50dff5

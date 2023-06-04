@@ -238,7 +238,7 @@ text-align: center;
 
 }
 `
-const SecondSearchBlock = () => {
+const SecondSearchBlock = ({ setDisappear }) => {
     const [searchType, setSearchType] = useState('VIN');
     const [validation, setValidation] = useState(false);
     const navigate = useNavigate();
@@ -252,9 +252,10 @@ const SecondSearchBlock = () => {
     const userData = watch("userData") ? watch("userData") : "";
     const onSubmit = (data) => {
         console.log(searchType, data.userData);
+        setDisappear(true)
         setTimeout(() => {
             navigate('/pre-search');
-        }, 300)
+        }, 600)
     };
     useEffect(() => {
         if (validation) {

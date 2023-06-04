@@ -26,28 +26,34 @@ const PresearchPage = () => {
         exited: { opacity: 0 },
     };
     return (
-        <>
-            <Header borderLine={true} />
-            <Transition in={!disappear} timeout={0} appear={true}>
-                {state => (
-                    <div
-                        style={{
-                            ...defaultStyle,
-                            ...transitionStyles[state]
-                        }}>
+        <Transition in timeout={0} appear={true}>
+            {state => (
+                <div
+                    style={{
+                        ...defaultStyle,
+                        ...transitionStyles[state]
+                    }}>
+                    <Header borderLine={true} />
+                    <Transition in={!disappear} timeout={0} appear={true}>
+                        {state => (
+                            <div
+                                style={{
+                                    ...defaultStyle,
+                                    ...transitionStyles[state]
+                                }}>
 
-                        {scene === 'progress' ?
-                            <Progress changeScene={changeScene} /> :
-                            scene === 'selectType' ?
-                                <SelectType changeScene={changeScene} /> :
-                                <EnterEmail />}
-                        <Footer withoutInput={true} />
-                    </div>
-                )
-                }
-            </Transition>
-        </>
-
+                                {scene === 'progress' ?
+                                    <Progress changeScene={changeScene} /> :
+                                    scene === 'selectType' ?
+                                        <SelectType changeScene={changeScene} /> :
+                                        <EnterEmail setDisappear={setDisappear} />}
+                                <Footer withoutInput={true} />
+                            </div>
+                        )
+                        }
+                    </Transition>
+                </div>)}
+        </Transition>
     )
 }
 export default PresearchPage;

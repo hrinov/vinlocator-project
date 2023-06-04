@@ -1,4 +1,6 @@
 import styled from "styled-components";
+import { useState } from "react";
+import { Transition } from "react-transition-group";
 import Header from "../components/common/Header";
 import MainTitle from "../components/mainPage/MainTitle";
 import FirstSearchBlock from "../components/mainPage/FirstSearchBlock";
@@ -33,18 +35,36 @@ background-repeat: no-repeat;
 }
 `
 const MainPage = () => {
+    const [disappear, setDisappear] = useState(false);
+    const defaultStyle = {
+        opacity: 0,
+        transition: `opacity 500ms ease-in-out`,
+    }
+    const transitionStyles = {
+        entering: { opacity: 1 },
+        entered: { opacity: 1 },
+        exiting: { opacity: 0 },
+        exited: { opacity: 0 },
+    };
     return (
-        <>
-            <GradientBlock />
-            <Header borderLine={true} />
-            <MainTitle />
-            <FirstSearchBlock />
-            <ServiceDescription />
-            <SecurityAssurence />
-            <Reviews />
-            <SecondSearchBlock />
-            <Footer withoutInput={false} />
-        </>
+        <Transition in={!disappear} timeout={0} appear={true}>
+            {state => (
+                <div
+                    style={{
+                        ...defaultStyle,
+                        ...transitionStyles[state]
+                    }}>
+                    <GradientBlock />
+                    <Header borderLine={true} />
+                    <MainTitle />
+                    <FirstSearchBlock setDisappear={setDisappear} />
+                    <ServiceDescription />
+                    <SecurityAssurence />
+                    <Reviews />
+                    <SecondSearchBlock setDisappear={setDisappear} />
+                    <Footer withoutInput={false} />
+                </div>)}
+        </Transition>
     )
 }
 export default MainPage;

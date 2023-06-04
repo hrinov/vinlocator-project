@@ -1,7 +1,7 @@
 import styled from "styled-components";
+import { useSpring, animated } from '@react-spring/web'
 import { ReactComponent as CardTick } from '../../icons/card-tick.svg';
 import { ReactComponent as Slide1 } from '../../images/first-3d-car.svg';
-import { ReactComponent as Slide1Mobile } from '../../images/first-3d-car.svg';
 import { ReactComponent as Slide3 } from '../../images/second-3d-car.svg';
 import slide4 from '../../images/shield.png';
 import { ReactComponent as Slide5 } from '../../images/third-3d-car.svg';
@@ -10,9 +10,7 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import { createGlobalStyle } from "styled-components";
 import { useEffect, useRef, useState } from "react";
 import { useNavigate } from "react-router-dom";
-import './slide1Animation.css'
-import './slide3Animation.css'
-import './slide5Animation.css'
+import './animations.css'
 const GlobalStyle = createGlobalStyle`
 .progress-block .progress-bar {
 background-color: #3AD0E6;
@@ -70,22 +68,29 @@ width: 570px;
  width: 420px;
 };
 @media (max-width: 424px) {
-
-}
-`
-const Slide1MobileImg = styled(Slide1Mobile)`
- width: 420px;
-@media (max-width: 424px) {
-  width: 320px;
+ width: 320px;
 }
 `
 const Slide3Img = styled(Slide3)`
+z-index: 0;
 transform: translateY(5%);
-width: 360px;
+width: 370px;
+@media (max-width: 1439px) {
+
+};
+@media (max-width: 1023px) {
+   
+};
+@media (max-width: 767px) {
+ width: 320px;
+};
+@media (max-width: 424px) {
+ width: 280px;
+}
 `
-const Slide4Img = styled.img`
-height: 275px;
-width: 320px;
+const Slide4Wrapper = styled(animated.div)`
+height: 285px;
+width: 330px;
 @media (max-width: 1439px) {
 
 };
@@ -115,7 +120,6 @@ width: 440px;
   width: 320px;
 }
 `
-// 52+
 const ProgressBlock = styled.div`
 height: 60px;
 @media (max-width: 1439px) {
@@ -132,6 +136,7 @@ height: 40px;
 }
 `
 const ProgressStatus = styled(ProgressBar)`
+z-index: 10;
 margin: 0 auto;
 width: 388px;
 height: 6px !important;
@@ -236,7 +241,7 @@ color: rgba(0, 0, 0, 0.95);
     } 
 }
 `
-const ListingsLabel = styled.div`
+const ListingsLabel = styled(animated.div)`
 position: absolute;
 top: -20px;
 left: 32px;
@@ -353,11 +358,26 @@ width: 320px;
 }
 `
 const Slide2 = () => {
+    const [state, setState] = useState(true)
+    const { x } = useSpring({
+        from: { x: 0 },
+        x: state ? 1 : 0,
+        config: { duration: 1300 },
+    })
+    useEffect(() => {
+        setTimeout(() => { setState(false) }, 1500)
+    }, [])
     return (
         <Slide2Wrapper>
-            <ListingsLabel><IconWrapper>
-                <CardTick style={{ width: '100%', height: '100%' }} />
-            </IconWrapper>Listings</ListingsLabel>
+            <ListingsLabel
+                style={!state ? {
+                    scale: x.to({
+                        range: [0, 0.25, 0.35, 0.45, 0.55, 0.65, 0.75, 1],
+                        output: [1, 0.97, 0.9, 1.1, 0.9, 1.1, 1.03, 1],
+                    }),
+                } : null}><IconWrapper>
+                    <CardTick style={{ width: '100%', height: '100%' }} />
+                </IconWrapper>Listings</ListingsLabel>
             <Slide2Block>
                 <Slide2BlockData>Listed for</Slide2BlockData>
                 <Slide2BlockData><span>$12.485</span></Slide2BlockData>
@@ -377,8 +397,29 @@ const Slide2 = () => {
         </Slide2Wrapper>)
 }
 const Slide4 = () => {
+    const [state, setState] = useState(false)
+    const { x } = useSpring({
+        from: { x: 0 },
+        x: state ? 1 : 0,
+        config: { duration: 2200 },
+    })
+    useEffect(() => {
+        setTimeout(() => { setState(true) }, 1300)
+    }, [])
     return (
-        <Slide4Img src={slide4} />
+        <Slide4Wrapper
+            style={state ? {
+                scale: x.to({
+                    range: [0, 0.25, 0.35, 0.45, 0.55, 0.65, 0.75, 1],
+                    output: [1, 0.97, 0.9, 1.1, 0.9, 1.1, 1.03, 1],
+                }),
+            } : null}>
+            <img
+                style={{ width: '100%', height: '100%' }}
+                src={slide4}
+                alt='shield'
+            />
+        </Slide4Wrapper>
     )
 }
 const Progress = () => {
@@ -432,6 +473,7 @@ const Progress = () => {
             }
             if (type === "away") {
                 const animation = block.current.animate([
+                    { opacity: "1" },
                     { opacity: "1" },
                     { opacity: "1" },
                     { opacity: "0" }
@@ -520,7 +562,7 @@ const Progress = () => {
             case 83:
                 Slide5Ref.current.classList.add('active')
                 break;
-            case 90:
+            case 93:
                 startAnimation('away');
                 break;
             case 100:
@@ -530,7 +572,6 @@ const Progress = () => {
                 break;
         }
         if (progress <= 88 || canFinish) {
-            // if (progress <= 10) {
             setTimeout(() => { setProgress(progress + 1) }, 350)
         }
     }, [progress]);
@@ -557,3 +598,6 @@ const Progress = () => {
     )
 }
 export default Progress;
+
+
+
