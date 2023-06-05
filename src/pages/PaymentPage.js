@@ -15,7 +15,7 @@ const PaymentPage = () => {
     };
     return (
         <>
-            <Header borderLine={false} />
+            <Header borderLine={true} />
             <Transition in={true} timeout={0} appear={true}>
                 {state => (
                     <div
