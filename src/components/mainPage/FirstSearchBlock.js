@@ -39,9 +39,6 @@ font-size: 20px;
 @media (max-width: 1439px) {
    padding-top: 40px; 
 };
-@media (max-width: 1023px) {
-
-};
 @media (max-width: 767px) {
     margin: 30px auto 15px auto;
     font-size: 15px;
@@ -63,12 +60,6 @@ width: 163px;
 height: 33px;
 border-bottom: 2px solid ${props => (props.bottomLine)};
 color: ${props => (props.color)};
-@media (max-width: 1439px) {
-
-};
-@media (max-width: 1023px) {
-
-};
 @media (max-width: 767px) {
 width: 126px;
 };
@@ -84,12 +75,6 @@ width: 163px;
 height: 33px;
 border-bottom: 2px solid ${props => (props.bottomLine)};
 color: ${props => (props.color)};
-@media (max-width: 1439px) {
-
-};
-@media (max-width: 1023px) {
-
-};
 @media (max-width: 767px) {
 width: 126px;
 };
@@ -116,12 +101,6 @@ box-shadow: 0px 0px 4px 6px rgba(0, 0, 0, 0.04), inset 0px 4px 4px rgba(0, 0, 0,
     font-size: 20px;
     color: #3A3A3A;
 }
-@media (max-width: 1439px) {
-
-};
-@media (max-width: 1023px) {
-
-};
 @media (max-width: 767px) {
  height: 55px;
   ::placeholder{
@@ -143,15 +122,6 @@ left: 17px;
 position: absolute;
 width: 24px;
 height: 24px;
-@media (max-width: 1439px) {
-
-};
-@media (max-width: 1023px) {
-
-};
-@media (max-width: 767px) {
-
-};
 @media (max-width: 424px) {
     top: 16px;
     left: 14px;
@@ -175,12 +145,6 @@ cursor: pointer;
 :hover{
    background-color: #50dff5; 
 }
-@media (max-width: 1439px) {
-
-};
-@media (max-width: 1023px) {
-
-};
 @media (max-width: 767px) {
     font-weight: 600;
     font-size: 18px;
@@ -199,15 +163,6 @@ margin-top: 11px;
 font-weight: 400;
 font-size: 14px;
 text-align: center;
-@media (max-width: 1439px) {
-
-};
-@media (max-width: 1023px) {
-
-};
-@media (max-width: 767px) {
-
-};
 @media (max-width: 424px) {
 font-size: 13px;
 }

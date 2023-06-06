@@ -68,9 +68,6 @@ font-weight: 600;
 font-size: 32px;
 text-align: center;
 width: 756px;
-@media (max-width: 1439px) {
-       
-};
 @media (max-width: 1023px) {
     width: 706px;
     font-size: 28px;
@@ -99,8 +96,8 @@ width: 933px;
 }
 @media (max-width: 1439px) {
     width: 810px;
-        line-height: 22px;
-font-size: 16px;
+    line-height: 22px;
+    font-size: 16px;
    h1{
     font-size: 16px;
 }};
@@ -113,9 +110,6 @@ font-size: 16px;
 @media (max-width: 767px) {
      width: 330px;
 };
-@media (max-width: 424px) {
- 
-}
 `
 const FirstBlock = styled.div`
 width: 100%;
@@ -123,12 +117,6 @@ height: 430px;
 display: flex;
 align-items: center;
 justify-content: space-between;
-@media (max-width: 1439px) {
-  
-};
-@media (max-width: 1023px) {
-
-};
 @media (max-width: 767px) {
     margin-top: 45px;
     flex-direction: column;
@@ -259,9 +247,6 @@ grid-auto-rows: 40px;
     grid-template-columns: 12px 129px 125px 85px;
   }
 };
-@media (max-width: 767px) {
-
-};
 @media (max-width: 424px) {
   display: none
 }
@@ -325,9 +310,6 @@ letter-spacing: 0.027rem;
 padding-left: 11px;
 padding-right: 11px;
 };
-@media (max-width: 767px) {
-
-};
 @media (max-width: 424px) {
 padding-left: 10px;
 padding-right: 10px;
@@ -339,9 +321,6 @@ height: 645px;
 display: flex;
 align-items: center;
 justify-content: space-between;
-@media (max-width: 1439px) {
-       
-};
 @media (max-width: 1023px) {
     height: 430px;
  };
@@ -349,22 +328,13 @@ justify-content: space-between;
     height: 600px;
     flex-direction: column-reverse;
 };
-@media (max-width: 424px) {
- 
-}
 `
 const SecondGraphicBlockElement = styled(First3dCar)`
 width: 694px;
 height: 480px;
-@media (max-width: 1439px) {
-       
-};
 @media (max-width: 1023px) {
     width: 415px;
  };
-@media (max-width: 767px) {
-
-};
 @media (max-width: 424px) {
  width: 320px;
 }
@@ -429,9 +399,6 @@ border-radius: 20px;
 font-weight: 600;
 font-size: 11px;
 text-transform: uppercase;
-@media (max-width: 1439px) {
-
-};
 @media (max-width: 1023px) {
     top: -18px;
     padding-left: 15px;
@@ -463,12 +430,6 @@ grid-auto-rows: 28px;
 @media (max-width: 1023px) {
   grid-auto-rows: 25px;
 };
-@media (max-width: 767px) {
-
-};
-@media (max-width: 424px) {
- 
-}
 `
 const SalesListingLeftSideBlock = styled.div`
 font-weight: 400;
@@ -522,9 +483,6 @@ width: 440px;
 @media (max-width: 767px) {
    display: none
 };
-@media (max-width: 424px) {
- 
-}
 `
 const ThirdBlockMobileInfoWrapper = styled.div`
 margin-top: 75px;
@@ -536,12 +494,6 @@ margin-bottom: 55px;
 span{
     font-weight: 700
 }
-@media (max-width: 1439px) {
-
-};
-@media (max-width: 1023px) {
- 
-};
 @media (max-width: 767px) {
 display: flex;
 };
@@ -591,21 +543,13 @@ height: 659px;
     height: 359px;
      width: 330px;
 };
-@media (max-width: 424px) {
-}
 `
 const IconWrapper = styled.div`
 width: 24px;
 height: 24px;
-@media (max-width: 1439px) {
-
-};
 @media (max-width: 1023px) {
     width: 18px;
     height: 18px;
-};
-@media (max-width: 767px) {
- 
 };
 @media (max-width: 424px) {
      width: 17px;

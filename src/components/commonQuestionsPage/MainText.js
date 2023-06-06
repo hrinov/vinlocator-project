@@ -32,9 +32,6 @@ font-size: 35px;
 @media (max-width: 1023px) {
 font-size: 30px;
 };
-@media (max-width: 767px) {
- 
-};
 @media (max-width: 424px) {
 font-size: 24px;
 }
@@ -50,9 +47,6 @@ font-size: 16px;
 }
 @media (max-width: 1439px) {
 font-size: 15px;
-};
-@media (max-width: 1023px) {
-
 };
 @media (max-width: 767px) {
  font-size: 14px;

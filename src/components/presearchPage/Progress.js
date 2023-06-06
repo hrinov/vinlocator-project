@@ -22,9 +22,6 @@ margin: 0 auto;
 height: 675px;
 width: 650px;
 overflow: hidden;
-@media (max-width: 1439px) {
-
-};
 @media (max-width: 1023px) {
 height: 650px;
 };
@@ -34,7 +31,6 @@ width: 100vw
 };
 @media (max-width: 424px) {
       height: 600px;
-
 }
 `
 const Title = styled.div`
@@ -45,21 +41,18 @@ font-size: 20px;
 span{
     color: #FF0000;
 }
-@media (max-width: 1439px) {
-
-};
 @media (max-width: 1023px) {
 margin-top: 100px;
 };
 @media (max-width: 767px) {
-        margin: 0 auto;
-margin-top: 70px;
-width: 420px;
+    margin: 0 auto;
+    margin-top: 70px;
+    width: 420px;
 };
 @media (max-width: 424px) {
     width: 320px;
     margin-top: 40px;
-font-size: 18px;
+    font-size: 18px;
 }
 `
 const CarBlock = styled.div`
@@ -72,9 +65,6 @@ transform: translateX(-100%);
 @media (max-width: 767px) {
 width: 100vw
 };
-@media (max-width: 424px) {
-
-}
 `
 const Car1Img = styled(Car1)`
 width: 180px;
@@ -129,27 +119,12 @@ height: 100px;
 @media (max-width: 1023px) {
 height: 80px;
 };
-@media (max-width: 767px) {
-
-};
-@media (max-width: 424px) {
-
-}
 `
 const ProgressStatus = styled(ProgressBar)`
 margin: 0 auto;
 width: 388px;
 height: 6px !important;
-background-color: rgba(0, 0, 0, 0.75);
-@media (max-width: 1439px) {
-
-};
-@media (max-width: 1023px) {
-
-};
-@media (max-width: 767px) {
-
-};
+background-color: rgba(31, 31, 31, 1);
 @media (max-width: 424px) {
 width: 320px;
 }
@@ -161,9 +136,6 @@ width: 100%;
 font-weight: 400;
 font-size: 24px;
 line-height: 38px;
-@media (max-width: 1439px) {
-
-};
 @media (max-width: 1023px) {
 font-size: 22px;
 line-height: 30px;
@@ -186,16 +158,6 @@ const Progress = ({ changeScene }) => {
     const [carElement, setCarElement] = useState()
     const carBlock = useRef();
     const cars = [Car1Img, Car2Img, Car3Img, Car4Img, Car5Img, Car6Img, Car7Img, Car8Img, Car9Img];
-    const defaultStyle = {
-        opacity: 0,
-        transition: `opacity 500ms ease-in-out`,
-    }
-    const transitionStyles = {
-        entering: { opacity: 1 },
-        entered: { opacity: 1 },
-        exiting: { opacity: 0 },
-        exited: { opacity: 0 },
-    };
     const startAnimation = (type) => {
         if (!type || type === 'center') {
             const animation = carBlock.current.animate(
@@ -226,7 +188,6 @@ const Progress = ({ changeScene }) => {
             ],
                 {
                     duration: 850,
-                    easing: 'cubic-bezier(1, 1, 0.6, 0.3)',
                     iterations: 1,
                 }
             );

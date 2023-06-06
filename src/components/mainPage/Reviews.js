@@ -150,12 +150,6 @@ span{
     font-size: 13px;
     color: #D5DBE1;
 }
-@media (max-width: 1439px) {
-
-};
-@media (max-width: 1023px) {
-
-};
 @media (max-width: 767px) {
 margin-top: 32px;
 };
@@ -174,15 +168,6 @@ height: 16px;
 display: flex;
 justify-content: space-between;
 margin-bottom: 5px;
-@media (max-width: 1439px) {
-
-};
-@media (max-width: 1023px) {
-
-};
-@media (max-width: 767px) {
-
-};
 @media (max-width: 424px) {
 width: 70px;
 }
@@ -192,12 +177,6 @@ width: 16px;
 height: 16px;
 border-radius: 100%;
 border: 2px solid #D5DBE1;
-@media (max-width: 1439px) {
-
-};
-@media (max-width: 1023px) {
-
-};
 @media (max-width: 767px) {
 width: 14px;
 height: 14px;
@@ -210,9 +189,6 @@ height: 13px;
 const UnionIcon = styled(Union)`
 width: 64px;
 height: 52px;
-@media (max-width: 1439px) {
-
-};
 @media (max-width: 1023px) {
 height: 45px;
 };

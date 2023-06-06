@@ -10,17 +10,17 @@ width: 1112px;
 height: 88px;
 border-bottom: ${props => props.borderLine ? '1px solid #D5DBE1' : 'none'};
 @media (max-width: 1439px) {
-width: 900px;
+    width: 900px;
 };
 @media (max-width: 1023px) {
-  width: 706px;
+    width: 706px;
 };
 @media (max-width: 767px) {
- width: 422px;
+    width: 422px;
 };
 @media (max-width: 424px) {
-  width: 320px;
-  height: 78px;
+    width: 320px;
+    height: 78px;
 }
 `
 const LogoBlock = styled.div`
@@ -47,12 +47,6 @@ cursor: pointer;
 :hover{
     background-color: #50dff5
 }
-@media (max-width: 1439px) {
-
-};
-@media (max-width: 1023px) {
-
-};
 @media (max-width: 767px) {
     font-size: 12px;
     width: 80px;
@@ -68,32 +62,14 @@ const InfoBlock = styled.div`
 font-weight: 500;
 font-size: 14px;
 margin-left: 10px;
-@media (max-width: 1439px) {
-
-};
-@media (max-width: 1023px) {
-
-};
 @media (max-width: 767px) {
  display: none
 };
-@media (max-width: 424px) {
- 
-}
 `
 const LogoIcon = styled.div`
 height: 125px;
 transform: translateX(-37px);
 cursor: pointer;
-@media (max-width: 1439px) {
-
-};
-@media (max-width: 1023px) {
-
-};
-@media (max-width: 767px) {
-
-};
 @media (max-width: 424px) {
  height: 90px;
 width: 135px;
@@ -118,6 +94,5 @@ const Header = ({ borderLine }) => {
             </EndBlock>
         </MainWrapper>
     )
-
 }
 export default Header;

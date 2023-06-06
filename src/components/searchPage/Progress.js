@@ -20,18 +20,6 @@ const MainWrapper = styled.section`
 background: rgb(255,255,255);
 background: linear-gradient(180deg, rgba(255,255,255,1) 40%, #dbf7fc 100%);
 background-repeat: no-repeat;
-@media (max-width: 1439px) {
-
-};
-@media (max-width: 1023px) {
-
-};
-@media (max-width: 767px) {
-
-};
-@media (max-width: 424px) {
-
-}
 `
 const SlidesBlock = styled.div`
 margin: 30px auto;
@@ -41,9 +29,6 @@ display: flex;
 justify-content: center;
 align-items: center;
 opacity: 0;
-@media (max-width: 1439px) {
-
-};
 @media (max-width: 1023px) {
    margin: 20px auto;
 };
@@ -58,12 +43,6 @@ margin: 10px auto;
 `
 const Slide1Img = styled(Slide1)`
 width: 570px;
-@media (max-width: 1439px) {
-
-};
-@media (max-width: 1023px) {
-   
-};
 @media (max-width: 767px) {
  width: 420px;
 };
@@ -75,12 +54,6 @@ const Slide3Img = styled(Slide3)`
 z-index: 0;
 transform: translateY(5%);
 width: 370px;
-@media (max-width: 1439px) {
-
-};
-@media (max-width: 1023px) {
-   
-};
 @media (max-width: 767px) {
  width: 320px;
 };
@@ -91,15 +64,6 @@ width: 370px;
 const Slide4Wrapper = styled(animated.div)`
 height: 285px;
 width: 330px;
-@media (max-width: 1439px) {
-
-};
-@media (max-width: 1023px) {
-   
-};
-@media (max-width: 767px) {
-
-};
 @media (max-width: 424px) {
 height: 250px;
 width: 295px;
@@ -107,24 +71,12 @@ width: 295px;
 `
 const Slide5Img = styled(Slide5)`
 width: 440px;
-@media (max-width: 1439px) {
-
-};
-@media (max-width: 1023px) {
-   
-};
-@media (max-width: 767px) {
-
-};
 @media (max-width: 424px) {
   width: 320px;
 }
 `
 const ProgressBlock = styled.div`
 height: 60px;
-@media (max-width: 1439px) {
-
-};
 @media (max-width: 1023px) {
 height: 55px;
 };
@@ -140,16 +92,7 @@ z-index: 10;
 margin: 0 auto;
 width: 388px;
 height: 6px !important;
-background-color: rgba(0, 0, 0, 0.75);
-@media (max-width: 1439px) {
-
-};
-@media (max-width: 1023px) {
-
-};
-@media (max-width: 767px) {
-
-};
+background-color: rgba(31, 31, 31, 1);
 @media (max-width: 424px) {
 width: 320px;
 }
@@ -171,12 +114,6 @@ height: 290px;
 border: 1px solid rgba(0, 0, 0, 0.5);;
 box-shadow: 0px 30px 20px rgba(0, 0, 0, 0.04);
 border-radius: 30px;
-@media (max-width: 1439px) {
-
-};
-@media (max-width: 1023px) {
-
-};
 @media (max-width: 767px) {
 height: 270px;
 };
@@ -192,12 +129,6 @@ width: 300px;
 display: grid;
 grid-template-columns: 115px 180px;
 grid-auto-rows: 32px;
-@media (max-width: 1439px) {
-
-};
-@media (max-width: 1023px) {
-
-};
 @media (max-width: 767px) {
 grid-auto-rows: 28px;
 };
@@ -259,9 +190,6 @@ border-radius: 20px;
 font-weight: 600;
 font-size: 11px;
 text-transform: uppercase;
-@media (max-width: 1439px) {
-
-};
 @media (max-width: 1023px) {
     top: -18px;
     padding-left: 15px;
@@ -289,25 +217,13 @@ height: 24px;
 width: 22px;
 height: 22px;
 };
-@media (max-width: 1023px) {
-
-};
 @media (max-width: 767px) {
 width: 18px;
 height: 18px;
 };
-@media (max-width: 424px) {
-
-}
 `
 const DescriptionBlock = styled.div`
 min-height: 280px;
-@media (max-width: 1439px) {
-
-};
-@media (max-width: 1023px) {
-
-};
 @media (max-width: 767px) {
 min-height: 300px;
 };
@@ -319,9 +235,6 @@ const Title = styled.div`
 text-align: center;
 font-weight: 600;
 font-size: 26px;
-@media (max-width: 1439px) {
-
-};
 @media (max-width: 1023px) {
 font-size: 24px;
 };
@@ -342,9 +255,6 @@ line-height: 20px;
 span {
     font-weight: 600
 }
-@media (max-width: 1439px) {
-
-};
 @media (max-width: 1023px) {
 width: 706px;
 };

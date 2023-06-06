@@ -43,9 +43,6 @@ padding-right: 50px;
 margin: 30px auto 20px auto;
 font-weight: 700;
 font-size: 20px;
-@media (max-width: 1439px) {
- 
-};
 @media (max-width: 1023px) {
 margin: 20px auto 20px auto;
 };
@@ -71,12 +68,6 @@ justify-content: center;
 width: 163px;
 height: 33px;
 border-bottom: 2px solid ${props => (props.bottomLine)};
-@media (max-width: 1439px) {
-
-};
-@media (max-width: 1023px) {
-
-};
 @media (max-width: 767px) {
 width: 126px;
 };
@@ -91,12 +82,6 @@ justify-content: center;
 width: 163px;
 height: 33px;
 border-bottom: 2px solid ${props => (props.bottomLine)};
-@media (max-width: 1439px) {
-
-};
-@media (max-width: 1023px) {
-
-};
 @media (max-width: 767px) {
 width: 126px;
 };
@@ -107,12 +92,6 @@ width: 107px;
 const Form = styled.form`
 position: relative;
 width: 536px;
-@media (max-width: 1439px) {
-
-};
-@media (max-width: 1023px) {
-
-};
 @media (max-width: 767px) {
     width: 380px;
 };
@@ -140,12 +119,6 @@ box-shadow: 0px 0px 0px 6px rgba(0, 0, 0, 0.04), inset 0px 4px 4px rgba(0, 0, 0,
     font-size: 20px;
     color: #3A3A3A;
 }
-@media (max-width: 1439px) {
-
-};
-@media (max-width: 1023px) {
-
-};
 @media (max-width: 767px) {
     width: 380px;
     height: 55px;
@@ -169,15 +142,6 @@ left: 17px;
 position: absolute;
 width: 24px;
 height: 24px;
-@media (max-width: 1439px) {
-
-};
-@media (max-width: 1023px) {
-
-};
-@media (max-width: 767px) {
-
-};
 @media (max-width: 424px) {
     top: 16px;
     left: 14px;
@@ -201,12 +165,6 @@ cursor: pointer;
 :hover{
    background-color: #50dff5; 
 }
-@media (max-width: 1439px) {
-
-};
-@media (max-width: 1023px) {
-
-};
 @media (max-width: 767px) {
     font-weight: 600;
     font-size: 18px;
@@ -225,17 +183,8 @@ margin-top: 11px;
 font-weight: 400;
 font-size: 14px;
 text-align: center;
-@media (max-width: 1439px) {
-
-};
-@media (max-width: 1023px) {
-
-};
 @media (max-width: 767px) {
     font-size: 13px;
-}
-@media (max-width: 424px) {
-
 }
 `
 const SecondSearchBlock = ({ setDisappear }) => {

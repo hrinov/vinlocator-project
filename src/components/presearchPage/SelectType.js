@@ -20,9 +20,6 @@ const MainWrapper = styled.section`
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    @media (max-width: 1439px) {
-
-};
 @media (max-width: 1023px) {
 height: 650px;
 };
@@ -69,19 +66,10 @@ grid-auto-rows: 40px;
 @media (max-width: 1023px) {
 display: none;
 };
-@media (max-width: 767px) {
-   
-};
-@media (max-width: 424px) {
-     
-}
 `;
 
 const OptionsBlockMobile = styled.div`
 display: none;
-@media (max-width: 1439px) {
-   
-};
 @media (max-width: 1023px) {
 display: grid;
 row-gap: 14px;
@@ -211,9 +199,6 @@ cursor: pointer;
 padding-left: 16px;
 padding-right: 16px;
 };
-@media (max-width: 1023px) {
-
-};
 @media (max-width: 767px) {
 padding-left: 12px;
 padding-right: 12px;
@@ -231,28 +216,16 @@ height: 24px;
 width: 22px;
 height: 22px;
 };
-@media (max-width: 1023px) {
-
-};
 @media (max-width: 767px) {
 width: 18px;
 height: 18px;
 };
-@media (max-width: 424px) {
-
-}
 `
 const ButtonsHolder = styled.div`
 display: flex;
 justify-content: center;
 width: 256px;
 margin-top: 100px;
-    @media (max-width: 1439px) {
-
-};
-@media (max-width: 1023px) {
-
-};
 @media (max-width: 767px) {
 margin-top: 70px;
 };
@@ -265,8 +238,8 @@ background: #D5DBE1;
 width: 75px;
 height: 37px;
 border: 1px solid rgba(0, 0, 0, 0.5);
-font-size: 13px;
-font-weight: 600;
+font-size: 14px;
+font-weight: 700;
 border-radius: 40px;
 margin-left: 10px;
 transition-duration: 300ms;
@@ -274,15 +247,6 @@ cursor: pointer;
 :hover{
     background-color: #50dff5
 }
-@media (max-width: 1439px) {
-
-};
-@media (max-width: 1023px) {
-
-};
-@media (max-width: 767px) {
-
-};
 @media (max-width: 424px) {
 width: 70px;
 height: 34px;
@@ -293,23 +257,14 @@ background: #D5DBE1;
 width: 128px;
 height: 37px;
 border: 1px solid rgba(0, 0, 0, 0.5);
-font-size: 13px;
-font-weight: 600;
+font-size: 14px;
+font-weight: 700;
 border-radius: 40px;
 margin-left: 10px;
 cursor: pointer;
 :hover{
     background-color: #50dff5
 }
-@media (max-width: 1439px) {
-
-};
-@media (max-width: 1023px) {
-
-};
-@media (max-width: 767px) {
-
-};
 @media (max-width: 424px) {
 width: 120px;
 height: 34px;

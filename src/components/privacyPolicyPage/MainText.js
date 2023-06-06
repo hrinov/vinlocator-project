@@ -9,11 +9,11 @@ width: 1112px;
 width: 900px;
 };
 @media (max-width: 1023px) {
-        padding-bottom: 90px;
+    padding-bottom: 90px;
   width: 706px;
 };
 @media (max-width: 767px) {
-            padding-bottom: 70px;
+    padding-bottom: 70px;
  width: 420px;
 };
 @media (max-width: 424px) {
@@ -32,9 +32,6 @@ font-size: 35px;
 @media (max-width: 1023px) {
 font-size: 30px;
 };
-@media (max-width: 767px) {
- 
-};
 @media (max-width: 424px) {
 font-size: 24px;
 }
@@ -49,9 +46,6 @@ font-weight: 700;
 font-size: 16px;}
 @media (max-width: 1439px) {
 font-size: 15px;
-};
-@media (max-width: 1023px) {
-
 };
 @media (max-width: 767px) {
  font-size: 14px;

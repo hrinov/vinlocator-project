@@ -16,9 +16,6 @@ justify-content: center;
      height: 120px;
   padding-top: 35px;
 };
-@media (max-width: 424px) {
- 
-}
 `
 const TextBlock = styled.h1`
 display: block;

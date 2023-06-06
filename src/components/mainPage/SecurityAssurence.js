@@ -38,9 +38,6 @@ width: 445px;
     height: 275px;
     width: 320px;
 };
-@media (max-width: 767px) {
-
-};
 @media (max-width: 424px) {
     height: 269px;
     width: 300px;
@@ -93,9 +90,6 @@ letter-spacing: 0.015em;
 line-height: 20px;
 @media (max-width: 1439px) {
 font-size: 12px;
-};
-@media (max-width: 1023px) {
-
 };
 @media (max-width: 767px) {
 width: 420px;

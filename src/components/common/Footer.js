@@ -9,16 +9,12 @@ background-color: black;
 padding-bottom: 40px;
 @media (max-width: 1439px) {
     padding-top: 200px;
-
 };
 @media (max-width: 1023px) {
     padding-top: 180px;
 };
-@media (max-width: 767px) {
-};
 @media (max-width: 424px) {
     padding-top: 165px;
-
 }
 `
 const DataWrapper = styled.section`
@@ -72,9 +68,6 @@ cursor: pointer;
 :hover{
     background-color: #50dff5
 }
-@media (max-width: 1439px) {
-
-};
 @media (max-width: 1023px) {
     font-size: 12px;
 };
@@ -102,22 +95,10 @@ font-size: 12px;
 @media (max-width: 767px) {
 display: none;
 };
-@media (max-width: 424px) {
-
-}
 `
 const LogoIcon = styled.div`
 height: 125px;
 width: 155px;
-@media (max-width: 1439px) {
-
-};
-@media (max-width: 1023px) {
-
-};
-@media (max-width: 767px) {
-
-};
 @media (max-width: 424px) {
  height: 90px;
 width: 135px;
@@ -140,9 +121,6 @@ font-size: 13px;
 @media (max-width: 1023px) {
 font-size: 12px;
 };
-@media (max-width: 767px) {
-
-};
 @media (max-width: 424px) {
 margin-top:25px;
 }
@@ -157,20 +135,17 @@ align-items: center;
 color: white;
 font-size: 12px;
 font-weight: 500;
-@media (max-width: 1439px) {
-
-};
 @media (max-width: 1023px) {
-        margin-top: 50px;
+    margin-top: 50px;
     flex-direction: column
 };
 @media (max-width: 767px) {
-          margin-top: 60px;
+    margin-top: 60px;
     font-size: 10px;
 };
 @media (max-width: 424px) {
-font-size: 11px;
-  margin-top: 40px;
+    font-size: 11px;
+    margin-top: 40px;
 }
 `
 const Rights = styled.div`
@@ -199,12 +174,6 @@ margin-top: 30px;
 text-decoration: underline;
 text-underline-offset: 4px;
 };
-@media (max-width: 767px) {
-
-};
-@media (max-width: 424px) {
-
-}
 }
 `
 const Footer = ({ withoutInput }) => {
@@ -254,7 +223,6 @@ const Footer = ({ withoutInput }) => {
                 </EndBlock>
             </DataWrapper>
         </MainWrapper>
-
     )
 }
 export default Footer;

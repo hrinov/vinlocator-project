@@ -72,7 +72,6 @@ const PrivacyTermsQuestionsNavbar = ({ activePage }) => {
                 Common Questions
             </NavElement>
         </MainWrapper>
-
     )
 }
 export default PrivacyTermsQuestionsNavbar;

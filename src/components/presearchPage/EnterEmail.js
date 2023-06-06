@@ -59,12 +59,6 @@ height: 650px;
 const LettersImg = styled(Letters)`
 width: 483px;
 height: 172px;
-@media (max-width: 1439px) {
-
-};
-@media (max-width: 1023px) {
-
-};
 @media (max-width: 767px) {
 width: 340px;
 };
@@ -113,12 +107,6 @@ box-shadow: 0px 0px 4px 6px rgba(0, 0, 0, 0.04), inset 0px 4px 4px rgba(0, 0, 0,
     font-size: 20px;
     color: #3A3A3A;
 }
-@media (max-width: 1439px) {
-
-};
-@media (max-width: 1023px) {
-
-};
 @media (max-width: 767px) {
  height: 55px;
   ::placeholder{
@@ -140,15 +128,6 @@ left: 17px;
 position: absolute;
 width: 24px;
 height: 24px;
-@media (max-width: 1439px) {
-
-};
-@media (max-width: 1023px) {
-
-};
-@media (max-width: 767px) {
-
-};
 @media (max-width: 424px) {
     top: 16px;
     left: 14px;
@@ -172,12 +151,6 @@ cursor: pointer;
 :hover{
    background-color: #50dff5; 
 }
-@media (max-width: 1439px) {
-
-};
-@media (max-width: 1023px) {
-
-};
 @media (max-width: 767px) {
     font-weight: 600;
     font-size: 18px;
@@ -196,15 +169,6 @@ margin-bottom: 11px;
 font-weight: 400;
 font-size: 14px;
 text-align: center;
-@media (max-width: 1439px) {
-
-};
-@media (max-width: 1023px) {
-
-};
-@media (max-width: 767px) {
-
-};
 @media (max-width: 424px) {
 font-size: 13px;
 }
@@ -223,9 +187,6 @@ width: 900px;
 @media (max-width: 767px) {
    width: 100vw;
 };
-@media (max-width: 424px) {
-
-}
 `
 const ArrowLeftIcon = styled(ArrowLeft)`
 display: block;
@@ -238,12 +199,6 @@ cursor: pointer;
 z-index: 10;
 background-color: white;
 border-radius: 100%;
-@media (max-width: 1439px) {
-
-};
-@media (max-width: 1023px) {
-
-};
 @media (max-width: 767px) {
 height: 45px;
 width: 45px;
@@ -266,12 +221,6 @@ cursor: pointer;
 z-index: 10;
 background-color: white;
 border-radius: 100%;
-@media (max-width: 1439px) {
-
-};
-@media (max-width: 1023px) {
-
-};
 @media (max-width: 767px) {
 height: 45px;
 width: 45px;
@@ -355,12 +304,6 @@ span{
     font-size: 13px;
     color: #D5DBE1;
 }
-@media (max-width: 1439px) {
-
-};
-@media (max-width: 1023px) {
-
-};
 @media (max-width: 767px) {
 margin-top: 32px;
 };
@@ -380,12 +323,6 @@ display: flex;
 justify-content: space-between;
 margin-bottom: 180px;
 
-@media (max-width: 1439px) {
-
-};
-@media (max-width: 1023px) {
-
-};
 @media (max-width: 767px) {
 margin-bottom: 150px;
 };
@@ -399,12 +336,6 @@ width: 16px;
 height: 16px;
 border-radius: 100%;
 border: 2px solid #D5DBE1;
-@media (max-width: 1439px) {
-
-};
-@media (max-width: 1023px) {
-
-};
 @media (max-width: 767px) {
 width: 14px;
 height: 14px;
@@ -417,9 +348,6 @@ height: 13px;
 const UnionIcon = styled(Union)`
 width: 64px;
 height: 52px;
-@media (max-width: 1439px) {
-
-};
 @media (max-width: 1023px) {
 height: 45px;
 };
